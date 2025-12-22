@@ -1,0 +1,10 @@
+Build: (cd build)
+    Change in CMakeLists: cmake ..
+    Change in code: cmake --build . -j
+Run:
+    ./raytracer "path"
+
+
+ChatGPT Usage:
+    XML Parser:         https://chatgpt.com/share/6949913c-7f70-8012-8e94-2b99ac73db5b
+    Scene Structure:    https://chatgpt.com/share/69499153-f408-8012-9284-0376380fb6ce

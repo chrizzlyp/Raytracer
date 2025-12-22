@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/raytracer.dir/src/main.cpp.o CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.o "CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o" -o raytracer 
