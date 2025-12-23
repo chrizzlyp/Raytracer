@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src" -I"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/math" -I"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene" -I"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser" -I"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser"
+CXX_INCLUDES = -I"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src" -I"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser"
 
 CXX_FLAGS = -std=c++17 -Wall -Wextra -Wpedantic
 

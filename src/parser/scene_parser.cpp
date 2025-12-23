@@ -1,7 +1,10 @@
 #include "parser/scene_parser.h"
 #include "parser/xml_parser_utils.h"
+#include "scene/lights/utils/lights.h"
 #include "scene/scene.h"
 
+#include <cstring>
+#include <memory>
 #include <sstream>
 
 // Top-level entry: load XML file, locate <scene>, then delegate to parse steps.
@@ -27,6 +30,8 @@ bool SceneParser::loadSceneFromXMLFile(const std::string &path, Scene &outScene,
   if (!parseBasics(xmlElement, outScene, outError))
     return false;
   if (!parseCamera(xmlElement, outScene.cameraMutable(), outError))
+    return false;
+  if (!parseLights(xmlElement, outScene, outError))
     return false;
 
   return true;
@@ -123,3 +128,38 @@ bool SceneParser::parseCamera(const tinyxml2::XMLElement *xmlElement, Camera &ou
 
   return true;
 }
+
+bool SceneParser::parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const {
+  // <lights> optional
+  const tinyxml2::XMLElement *lightsEl = sceneEl->FirstChildElement("lights");
+  if (!lightsEl)
+    return true;
+
+  for (const tinyxml2::XMLElement *el = lightsEl->FirstChildElement();
+       el != nullptr; el = el->NextSiblingElement()) {
+    const char *name = el->Name();
+    if (!name)
+      continue;
+
+    if (std::strcmp(name, "ambient_light") == 0) {
+      if (!parseAmbientLight(el, outScene, outError))
+        return false;
+    } else if (std::strcmp(name, "point_light") == 0) {
+      if (!parsePointLight(el, outScene, outError))
+        return false;
+    } else if (std::strcmp(name, "parallel_light") == 0) {
+      if (!parseParallelLight(el, outScene, outError))
+        return false;
+    } else if (std::strcmp(name, "spot_light") == 0) {
+      // optional (wenn du es noch nicht machst: return false mit Message)
+      if (!parseSpotLight(el, outScene, outError))
+        return false;
+    } else {
+      outError = std::string("Unknown light type <") + name + "> inside <lights>.";
+      return false;
+    }
+  }
+
+  return true;
+}
+

@@ -5,8 +5,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/raytracer.dir/src/main.cpp.o.d"
   "CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o"
   "CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o.d"
+  "CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o"
+  "CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o.d"
   "CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.o"
   "CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.o.d"
+  "CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o"
+  "CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o.d"
   "raytracer"
   "raytracer.pdb"
 )

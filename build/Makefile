@@ -201,6 +201,30 @@ src/parser/scene_parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.s
 .PHONY : src/parser/scene_parser.cpp.s
 
+src/parser/scene_parser_lights.o: src/parser/scene_parser_lights.cpp.o
+.PHONY : src/parser/scene_parser_lights.o
+
+# target to build an object file
+src/parser/scene_parser_lights.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o
+.PHONY : src/parser/scene_parser_lights.cpp.o
+
+src/parser/scene_parser_lights.i: src/parser/scene_parser_lights.cpp.i
+.PHONY : src/parser/scene_parser_lights.i
+
+# target to preprocess a source file
+src/parser/scene_parser_lights.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.i
+.PHONY : src/parser/scene_parser_lights.cpp.i
+
+src/parser/scene_parser_lights.s: src/parser/scene_parser_lights.cpp.s
+.PHONY : src/parser/scene_parser_lights.s
+
+# target to generate assembly for a file
+src/parser/scene_parser_lights.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.s
+.PHONY : src/parser/scene_parser_lights.cpp.s
+
 src/parser/xml_parser_utils.o: src/parser/xml_parser_utils.cpp.o
 .PHONY : src/parser/xml_parser_utils.o
 
@@ -225,6 +249,30 @@ src/parser/xml_parser_utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.s
 .PHONY : src/parser/xml_parser_utils.cpp.s
 
+src/scene/lights/utils/lights_io.o: src/scene/lights/utils/lights_io.cpp.o
+.PHONY : src/scene/lights/utils/lights_io.o
+
+# target to build an object file
+src/scene/lights/utils/lights_io.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o
+.PHONY : src/scene/lights/utils/lights_io.cpp.o
+
+src/scene/lights/utils/lights_io.i: src/scene/lights/utils/lights_io.cpp.i
+.PHONY : src/scene/lights/utils/lights_io.i
+
+# target to preprocess a source file
+src/scene/lights/utils/lights_io.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.i
+.PHONY : src/scene/lights/utils/lights_io.cpp.i
+
+src/scene/lights/utils/lights_io.s: src/scene/lights/utils/lights_io.cpp.s
+.PHONY : src/scene/lights/utils/lights_io.s
+
+# target to generate assembly for a file
+src/scene/lights/utils/lights_io.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.s
+.PHONY : src/scene/lights/utils/lights_io.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,9 +291,15 @@ help:
 	@echo "... src/parser/scene_parser.o"
 	@echo "... src/parser/scene_parser.i"
 	@echo "... src/parser/scene_parser.s"
+	@echo "... src/parser/scene_parser_lights.o"
+	@echo "... src/parser/scene_parser_lights.i"
+	@echo "... src/parser/scene_parser_lights.s"
 	@echo "... src/parser/xml_parser_utils.o"
 	@echo "... src/parser/xml_parser_utils.i"
 	@echo "... src/parser/xml_parser_utils.s"
+	@echo "... src/scene/lights/utils/lights_io.o"
+	@echo "... src/scene/lights/utils/lights_io.i"
+	@echo "... src/scene/lights/utils/lights_io.s"
 .PHONY : help
 
 
