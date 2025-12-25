@@ -33,6 +33,8 @@ bool SceneParser::loadSceneFromXMLFile(const std::string &path, Scene &outScene,
     return false;
   if (!parseLights(xmlElement, outScene, outError))
     return false;
+  if (!parseSurfaces(xmlElement, outScene, outError))
+    return false;
 
   return true;
 }
@@ -129,12 +131,16 @@ bool SceneParser::parseCamera(const tinyxml2::XMLElement *xmlElement, Camera &ou
   return true;
 }
 
+// Parse the optional <lights> section of the scene
 bool SceneParser::parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const {
-  // <lights> optional
+  // Locate <lights> under <scene>
   const tinyxml2::XMLElement *lightsEl = sceneEl->FirstChildElement("lights");
+  
+  // no <lights> elements 
   if (!lightsEl)
     return true;
 
+  // Read all elements in <lights>
   for (const tinyxml2::XMLElement *el = lightsEl->FirstChildElement();
        el != nullptr; el = el->NextSiblingElement()) {
     const char *name = el->Name();
@@ -151,11 +157,36 @@ bool SceneParser::parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outSce
       if (!parseParallelLight(el, outScene, outError))
         return false;
     } else if (std::strcmp(name, "spot_light") == 0) {
-      // optional (wenn du es noch nicht machst: return false mit Message)
       if (!parseSpotLight(el, outScene, outError))
         return false;
     } else {
       outError = std::string("Unknown light type <") + name + "> inside <lights>.";
+      return false;
+    }
+  }
+
+  return true;
+}
+
+bool SceneParser::parseSurfaces(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const {
+  const tinyxml2::XMLElement *surfacesEl = sceneEl->FirstChildElement("surfaces");
+  if (!surfacesEl)
+    return true; // optional
+
+  for (const tinyxml2::XMLElement *el = surfacesEl->FirstChildElement();
+       el != nullptr; el = el->NextSiblingElement()) {
+
+    const char *name = el->Name();
+    if (!name) continue;
+
+    if (std::strcmp(name, "sphere") == 0) {
+      if (!parseSphere(el, outScene, outError))
+        return false;
+    } else if (std::strcmp(name, "mesh") == 0) {
+      if (!parseMesh(el, outScene, outError))
+        return false;
+    } else {
+      outError = std::string("Unknown surface type <") + name + "> inside <surfaces>.";
       return false;
     }
   }

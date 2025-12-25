@@ -11,7 +11,10 @@ add_executable(raytracer
     src/parser/scene_parser.cpp
     src/parser/xml_parser_utils.cpp
     src/parser/scene_parser_lights.cpp
+    src/parser/scene_parser_surface.cpp
+    src/parser/obj-parser/object_parser.cpp
     src/scene/lights/utils/lights_io.cpp
+    src/scene/surfaces/transform.cpp
     lib/xml-parser/tinyxml2.cpp
 )
 

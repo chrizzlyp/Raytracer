@@ -177,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/parser/obj-parser/object_parser.o: src/parser/obj-parser/object_parser.cpp.o
+.PHONY : src/parser/obj-parser/object_parser.o
+
+# target to build an object file
+src/parser/obj-parser/object_parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/obj-parser/object_parser.cpp.o
+.PHONY : src/parser/obj-parser/object_parser.cpp.o
+
+src/parser/obj-parser/object_parser.i: src/parser/obj-parser/object_parser.cpp.i
+.PHONY : src/parser/obj-parser/object_parser.i
+
+# target to preprocess a source file
+src/parser/obj-parser/object_parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/obj-parser/object_parser.cpp.i
+.PHONY : src/parser/obj-parser/object_parser.cpp.i
+
+src/parser/obj-parser/object_parser.s: src/parser/obj-parser/object_parser.cpp.s
+.PHONY : src/parser/obj-parser/object_parser.s
+
+# target to generate assembly for a file
+src/parser/obj-parser/object_parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/obj-parser/object_parser.cpp.s
+.PHONY : src/parser/obj-parser/object_parser.cpp.s
+
 src/parser/scene_parser.o: src/parser/scene_parser.cpp.o
 .PHONY : src/parser/scene_parser.o
 
@@ -224,6 +248,30 @@ src/parser/scene_parser_lights.s: src/parser/scene_parser_lights.cpp.s
 src/parser/scene_parser_lights.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.s
 .PHONY : src/parser/scene_parser_lights.cpp.s
+
+src/parser/scene_parser_surface.o: src/parser/scene_parser_surface.cpp.o
+.PHONY : src/parser/scene_parser_surface.o
+
+# target to build an object file
+src/parser/scene_parser_surface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o
+.PHONY : src/parser/scene_parser_surface.cpp.o
+
+src/parser/scene_parser_surface.i: src/parser/scene_parser_surface.cpp.i
+.PHONY : src/parser/scene_parser_surface.i
+
+# target to preprocess a source file
+src/parser/scene_parser_surface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.i
+.PHONY : src/parser/scene_parser_surface.cpp.i
+
+src/parser/scene_parser_surface.s: src/parser/scene_parser_surface.cpp.s
+.PHONY : src/parser/scene_parser_surface.s
+
+# target to generate assembly for a file
+src/parser/scene_parser_surface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.s
+.PHONY : src/parser/scene_parser_surface.cpp.s
 
 src/parser/xml_parser_utils.o: src/parser/xml_parser_utils.cpp.o
 .PHONY : src/parser/xml_parser_utils.o
@@ -273,6 +321,30 @@ src/scene/lights/utils/lights_io.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.s
 .PHONY : src/scene/lights/utils/lights_io.cpp.s
 
+src/scene/surfaces/transform.o: src/scene/surfaces/transform.cpp.o
+.PHONY : src/scene/surfaces/transform.o
+
+# target to build an object file
+src/scene/surfaces/transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o
+.PHONY : src/scene/surfaces/transform.cpp.o
+
+src/scene/surfaces/transform.i: src/scene/surfaces/transform.cpp.i
+.PHONY : src/scene/surfaces/transform.i
+
+# target to preprocess a source file
+src/scene/surfaces/transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.i
+.PHONY : src/scene/surfaces/transform.cpp.i
+
+src/scene/surfaces/transform.s: src/scene/surfaces/transform.cpp.s
+.PHONY : src/scene/surfaces/transform.s
+
+# target to generate assembly for a file
+src/scene/surfaces/transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.s
+.PHONY : src/scene/surfaces/transform.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,18 +360,27 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/parser/obj-parser/object_parser.o"
+	@echo "... src/parser/obj-parser/object_parser.i"
+	@echo "... src/parser/obj-parser/object_parser.s"
 	@echo "... src/parser/scene_parser.o"
 	@echo "... src/parser/scene_parser.i"
 	@echo "... src/parser/scene_parser.s"
 	@echo "... src/parser/scene_parser_lights.o"
 	@echo "... src/parser/scene_parser_lights.i"
 	@echo "... src/parser/scene_parser_lights.s"
+	@echo "... src/parser/scene_parser_surface.o"
+	@echo "... src/parser/scene_parser_surface.i"
+	@echo "... src/parser/scene_parser_surface.s"
 	@echo "... src/parser/xml_parser_utils.o"
 	@echo "... src/parser/xml_parser_utils.i"
 	@echo "... src/parser/xml_parser_utils.s"
 	@echo "... src/scene/lights/utils/lights_io.o"
 	@echo "... src/scene/lights/utils/lights_io.i"
 	@echo "... src/scene/lights/utils/lights_io.s"
+	@echo "... src/scene/surfaces/transform.o"
+	@echo "... src/scene/surfaces/transform.i"
+	@echo "... src/scene/surfaces/transform.s"
 .PHONY : help
 
 

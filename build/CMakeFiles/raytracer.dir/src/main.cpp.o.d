@@ -209,6 +209,15 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/point_light.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/parallel_light.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat3.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/lib/xml-parser/tinyxml2.h \
  /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \

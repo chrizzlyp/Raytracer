@@ -212,6 +212,15 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o: \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/point_light.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/parallel_light.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat3.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/lib/xml-parser/tinyxml2.h \
  /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
@@ -223,4 +232,21 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.h
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.h \
+ /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/bits/chrono.h \
+ /usr/include/c++/13/ratio /usr/include/c++/13/ctime \
+ /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/codecvt \
+ /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /usr/include/c++/13/fstream \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc

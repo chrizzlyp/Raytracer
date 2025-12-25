@@ -12,6 +12,8 @@
 #include "math/color.h"
 #include "scene/camera.h"
 #include "scene/lights/utils/lights.h"
+#include "scene/surfaces/surface.h"
+#include "scene/surfaces/surface_io.h"
 
 class Scene {
 public:
@@ -36,10 +38,12 @@ public:
     return lights_;
   }
 
+  const std::vector<std::unique_ptr<Surface>> &surfaces() const {
+    return surfaces_;
+  }
+
   // setter
   void setOutputFileName(std::string path) {
-    if (path.empty())
-      throw std::invalid_argument("Scene outout file name must not be empty");
     outputFileName_ = std::move(path);
   }
 
@@ -59,12 +63,17 @@ public:
     lights_.push_back(std::move(l));
   }
 
+  void addSurface(std::unique_ptr<Surface> s) {
+    surfaces_.push_back(std::move(s));
+  }
+
 private:
   std::string outputFileName_;
   Color backgroundColor_{0.f, 0.f, 0.f};
   Camera camera_{};
   std::optional<AmbientLight> ambient_;
   std::vector<std::unique_ptr<Light>> lights_;
+  std::vector<std::unique_ptr<Surface>> surfaces_;
 };
 
 inline std::ostream &operator<<(std::ostream &os, const Scene &s) {
@@ -80,12 +89,20 @@ inline std::ostream &operator<<(std::ostream &os, const Scene &s) {
 
   os << ", lights=[";
   for (size_t i = 0; i < s.lights().size(); ++i) {
-    if (i) os << ", ";
+    if (i)
+      os << ", ";
     os << *s.lights()[i]; // nutzt operator<<(Light&)
   }
+
+  os << ", surfaces=[";
+  for (size_t i = 0; i < s.surfaces().size(); ++i) {
+    if (i)
+      os << ", ";
+    os << *s.surfaces()[i]; 
+  }
   os << "]}";
+
   return os;
 }
-
 
 #endif // SCENE_H

@@ -1,5 +1,5 @@
-CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o: \
- /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser_lights.cpp \
+CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o: \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser_surface.cpp \
  /usr/include/stdc-predef.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
@@ -249,4 +249,5 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o: \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc
+ /usr/include/c++/13/bits/fstream.tcc \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/obj-parser/object_parser.h

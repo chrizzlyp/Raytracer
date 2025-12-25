@@ -5,8 +5,8 @@
 #include <cstring>
 #include <memory>
 
-// helper nur in dieser Datei sichtbar
 namespace {
+// reads a mandatory <color r= g= b=> child
 bool readColorChild(const tinyxml2::XMLElement *parent, Color &out, std::string &outError, const char *ctx) {
   const tinyxml2::XMLElement *cEl = xmlutils::getRequiredChild(parent, "color", outError, ctx);
   if (!cEl)
@@ -20,6 +20,7 @@ bool readColorChild(const tinyxml2::XMLElement *parent, Color &out, std::string 
 }
 } // namespace
 
+// Parse <ambient_light> (the scene allows at only one ambient light) and creates and adds the light to the scene
 bool SceneParser::parseAmbientLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const {
   if (outScene.ambientLight().has_value()) {
     outError = "Scene can have at most one <ambient_light>.";
@@ -36,6 +37,7 @@ bool SceneParser::parseAmbientLight(const tinyxml2::XMLElement *el, Scene &outSc
   return true;
 }
 
+// Parse <point_light> reads mandatory <color> and <position> and creates and adds the light to the scene
 bool SceneParser::parsePointLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const {
   auto l = std::make_unique<PointLight>();
 
@@ -56,6 +58,7 @@ bool SceneParser::parsePointLight(const tinyxml2::XMLElement *el, Scene &outScen
   return true;
 }
 
+// Parse <parallel_light> reads mandatory <color> and <direction> and creates and adds the light to the scene (not normalized!)
 bool SceneParser::parseParallelLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const {
   auto l = std::make_unique<ParallelLight>();
 
@@ -76,6 +79,7 @@ bool SceneParser::parseParallelLight(const tinyxml2::XMLElement *el, Scene &outS
   return true;
 }
 
+// Parse <spot_light> not implemented yet
 bool SceneParser::parseSpotLight(const tinyxml2::XMLElement *, Scene &, std::string &outError) const {
   outError = "<spot_light> not supported yet.";
   return false;

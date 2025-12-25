@@ -1,6 +1,8 @@
 #include "scene/lights/utils/lights.h"
 #include <ostream>
 
+// Stream operators are implemented in this .cpp file to keep the header lightweight
+
 std::ostream &operator<<(std::ostream &os, const AmbientLight &l) {
   os << "AmbientLight{color=" << l.color() << "}";
   return os;

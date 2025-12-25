@@ -43,4 +43,13 @@ const tinyxml2::XMLElement *getRequiredChild(const tinyxml2::XMLElement *parent,
   return child;
 }
 
+std::string readTextFileOrThrow(const std::filesystem::path &p) {
+  std::ifstream in(p, std::ios::in);
+  if (!in)
+    throw std::runtime_error("Could not open file: " + p.string());
+  std::ostringstream ss;
+  ss << in.rdbuf();
+  return ss.str();
+}
+
 } // namespace xmlutils

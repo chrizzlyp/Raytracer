@@ -16,10 +16,15 @@ private:
   bool parseBasics(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const;
   bool parseCamera(const tinyxml2::XMLElement *sceneEl, Camera &outCamera, std::string &outError) const;
   bool parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const;
+  bool parseSurfaces(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const;
+  
   bool parseAmbientLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
   bool parsePointLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
   bool parseParallelLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
   bool parseSpotLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
+
+  bool parseSphere(const tinyxml2::XMLElement *sphereEl, Scene &outScene, std::string &outError) const;
+  bool parseMesh(const tinyxml2::XMLElement *meshEl, Scene &outScene, std::string &outError) const;
 };
 
 #endif
