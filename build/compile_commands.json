@@ -7,27 +7,27 @@
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
-  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/scene_parser.cpp\"",
-  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/scene_parser.cpp",
-  "output": "CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o"
+  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/xml-parser/scene_parser.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/scene_parser.cpp\"",
+  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/scene_parser.cpp",
+  "output": "CMakeFiles/raytracer.dir/src/parser/xml-parser/scene_parser.cpp.o"
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
-  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml_parser_utils.cpp\"",
-  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml_parser_utils.cpp",
-  "output": "CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.o"
+  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/xml_parser_utils.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.cpp\"",
+  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.cpp",
+  "output": "CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/xml_parser_utils.cpp.o"
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
-  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/scene_parser_lights.cpp\"",
-  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/scene_parser_lights.cpp",
-  "output": "CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o"
+  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/scene_parser_lights.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_lights.cpp\"",
+  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_lights.cpp",
+  "output": "CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/scene_parser_lights.cpp.o"
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
-  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/scene_parser_surface.cpp\"",
-  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/scene_parser_surface.cpp",
-  "output": "CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o"
+  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/scene_parser_surface.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_surface.cpp\"",
+  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_surface.cpp",
+  "output": "CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/scene_parser_surface.cpp.o"
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
@@ -43,9 +43,9 @@
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
-  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/transform.cpp\"",
-  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/transform.cpp",
-  "output": "CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o"
+  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/components/transform.cpp\"",
+  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/components/transform.cpp",
+  "output": "CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o"
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",

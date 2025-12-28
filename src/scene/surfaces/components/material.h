@@ -4,6 +4,7 @@
 #include "math/color.h"
 #include <optional>
 #include <string>
+#include <ostream>
 
 struct PhongParams {
   float kAmbient = 0.f;
@@ -46,14 +47,41 @@ public:
 private:
   MaterialType type_ = MaterialType::SOLID;
 
-  Color color_{1.f, 1.f, 1.f}; // <color r g b>
-  std::string textureName_{};  // <texture name="..."> (nur wenn textured)
+  Color color_{1.f, 1.f, 1.f}; 
+  std::string textureName_{};  
 
-  PhongParams phong_{}; // <phong ka kd ks exponent>
+  PhongParams phong_{}; 
 
-  float reflectance_ = 0.f;   // <reflectance r="...">
-  float transmittance_ = 0.f; // <transmittance t="...">
-  float ior_ = 1.f;           // <refraction iof="...">
+  float reflectance_ = 0.f;  
+  float transmittance_ = 0.f; 
+  float ior_ = 1.f;           
 };
+
+inline std::ostream& operator<<(std::ostream& os, const PhongParams& p) {
+  os << "PhongParams{ ka=" << p.kAmbient
+     << ", kd=" << p.kDiffuse
+     << ", ks=" << p.kSpecular
+     << ", exponent=" << p.exponentShininess
+     << " }";
+  return os;
+}
+
+inline std::ostream& operator<<(std::ostream& os, const Material& m) {
+  os << "Material{ type=" << (m.isTextured() ? "TEXTURED" : "SOLID");
+
+  if (m.isTextured()) {
+    os << ", texture=\"" << m.textureName() << "\"";
+  } else {
+    os << m.color();
+  }
+
+  os << ", " << m.phong()
+     << ", reflectance=" << m.reflectance()
+     << ", transmittance=" << m.transmittance()
+     << ", ior=" << m.ior()
+     << " }";
+  return os;
+}
+
 
 #endif

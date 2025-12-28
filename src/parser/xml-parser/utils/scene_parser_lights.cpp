@@ -1,5 +1,5 @@
-#include "parser/scene_parser.h"
-#include "parser/xml_parser_utils.h"
+#include "parser/xml-parser/scene_parser.h"
+#include "parser/xml-parser/utils/xml_parser_utils.h"
 #include "scene/lights/utils/lights.h"
 
 #include <cstring>

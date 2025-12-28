@@ -2,6 +2,8 @@
 #define MAT3_H
 
 #include <cmath>
+#include <ostream>
+#include <iomanip>
 
 struct Mat3 {
   // row-major: m[row][col]
@@ -23,5 +25,24 @@ inline Mat3 transpose(const Mat3& a) {
       r.m[i][j] = a.m[j][i];
   return r;
 }
+
+inline std::ostream& operator<<(std::ostream& os, const Mat3& M) {
+  std::ios oldState(nullptr);
+  oldState.copyfmt(os);
+
+  os << std::fixed << std::setprecision(4);
+  for (int r = 0; r < 3; ++r) {
+    os << "[ ";
+    for (int c = 0; c < 3; ++c) {
+      os << std::setw(9) << M.m[r][c] << ' ';
+    }
+    os << "]";
+    if (r < 2) os << '\n';
+  }
+
+  os.copyfmt(oldState);
+  return os;
+}
+
 
 #endif

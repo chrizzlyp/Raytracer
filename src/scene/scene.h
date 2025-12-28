@@ -13,7 +13,7 @@
 #include "scene/camera.h"
 #include "scene/lights/utils/lights.h"
 #include "scene/surfaces/surface.h"
-#include "scene/surfaces/surface_io.h"
+#include "scene/surfaces/utils/surface_io.h"
 
 class Scene {
 public:

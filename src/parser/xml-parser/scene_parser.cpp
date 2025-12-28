@@ -1,5 +1,5 @@
-#include "parser/scene_parser.h"
-#include "parser/xml_parser_utils.h"
+#include "parser/xml-parser/scene_parser.h"
+#include "parser/xml-parser/utils/xml_parser_utils.h"
 #include "scene/lights/utils/lights.h"
 #include "scene/scene.h"
 
@@ -135,8 +135,8 @@ bool SceneParser::parseCamera(const tinyxml2::XMLElement *xmlElement, Camera &ou
 bool SceneParser::parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const {
   // Locate <lights> under <scene>
   const tinyxml2::XMLElement *lightsEl = sceneEl->FirstChildElement("lights");
-  
-  // no <lights> elements 
+
+  // no <lights> elements
   if (!lightsEl)
     return true;
 
@@ -168,17 +168,23 @@ bool SceneParser::parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outSce
   return true;
 }
 
+// Parse the  <surface> section of the scene
 bool SceneParser::parseSurfaces(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const {
+  // Locate <surface> under <scene>
   const tinyxml2::XMLElement *surfacesEl = sceneEl->FirstChildElement("surfaces");
+  // no elements in <surface> 
   if (!surfacesEl)
-    return true; // optional
+    return true; 
 
+  // Iterate over all surface elements  
   for (const tinyxml2::XMLElement *el = surfacesEl->FirstChildElement();
        el != nullptr; el = el->NextSiblingElement()) {
 
     const char *name = el->Name();
-    if (!name) continue;
+    if (!name)
+      continue;
 
+    // Parse the surface based on its type
     if (std::strcmp(name, "sphere") == 0) {
       if (!parseSphere(el, outScene, outError))
         return false;

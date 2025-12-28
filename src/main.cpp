@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "parser/scene_parser.h"
+#include "parser/xml-parser/scene_parser.h"
 
 int main(int argc, char **argv) {
   if (argc < 2) {
@@ -20,6 +20,7 @@ int main(int argc, char **argv) {
 
   std::cout << scene << "\n";
   std::cout << "Parsed OK!\n";
+
 
   return 0;
 }

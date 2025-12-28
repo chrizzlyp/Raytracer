@@ -8,13 +8,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(raytracer 
     src/main.cpp
-    src/parser/scene_parser.cpp
-    src/parser/xml_parser_utils.cpp
-    src/parser/scene_parser_lights.cpp
-    src/parser/scene_parser_surface.cpp
+    src/parser/xml-parser/scene_parser.cpp
+    src/parser/xml-parser/utils/xml_parser_utils.cpp
+    src/parser/xml-parser/utils/scene_parser_lights.cpp
+    src/parser/xml-parser/utils/scene_parser_surface.cpp
     src/parser/obj-parser/object_parser.cpp
     src/scene/lights/utils/lights_io.cpp
-    src/scene/surfaces/transform.cpp
+    src/scene/surfaces/components/transform.cpp
     lib/xml-parser/tinyxml2.cpp
 )
 

@@ -17,11 +17,11 @@ public:
     radius_ = radius;
   }
 
-  const Vec3 &centerPosition() const{
+  const Vec3 &centerPosition() const {
     return centerPosition_;
   }
 
-    const float &radius() const{
+  const float &radius() const {
     return radius_;
   }
 
@@ -30,8 +30,9 @@ private:
   float radius_ = 1.f;
 };
 
-inline std::ostream& operator<<(std::ostream& os, const Sphere& s) {
-  os << "Sphere{center=" << s.centerPosition() << ", radius=" << s.radius() << "}";
+inline std::ostream &operator<<(std::ostream &os, const Sphere &s) {
+  os << "Sphere{center=" << s.centerPosition() << ", radius=" << s.radius() << ", material=" << s.material() << ", transform=\n"
+     << s.transform() << "}";
   return os;
 }
 

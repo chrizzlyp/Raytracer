@@ -99,7 +99,7 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/scene_parser.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/camera.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/ambient_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/light.h \
@@ -108,12 +108,12 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/utils/lights.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/scene.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/utils/surface_io.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -132,6 +132,7 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/codecvt.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -148,8 +149,11 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /usr/include/c++/13/bits/istream.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
+  /usr/include/c++/13/bits/locale_conv.h \
   /usr/include/c++/13/bits/locale_facets.h \
   /usr/include/c++/13/bits/locale_facets.tcc \
+  /usr/include/c++/13/bits/locale_facets_nonio.h \
+  /usr/include/c++/13/bits/locale_facets_nonio.tcc \
   /usr/include/c++/13/bits/localefwd.h \
   /usr/include/c++/13/bits/memory_resource.h \
   /usr/include/c++/13/bits/memoryfwd.h \
@@ -161,6 +165,7 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/quoted_string.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
@@ -201,6 +206,7 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
   /usr/include/c++/13/cstring \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -214,11 +220,13 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/locale \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
   /usr/include/c++/13/optional \
@@ -254,6 +262,7 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
@@ -356,7 +365,9 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/U
   /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -581,15 +592,15 @@ CMakeFiles/raytracer.dir/src/parser/obj-parser/object_parser.cpp.o: /mnt/c/Users
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.cpp \
+CMakeFiles/raytracer.dir/src/parser/xml-parser/scene_parser.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/scene_parser.cpp \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/lib/xml-parser/tinyxml2.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/color.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/scene_parser.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/camera.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/ambient_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/light.h \
@@ -598,12 +609,12 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o: /mnt/c/Users/graph/OneDr
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/utils/lights.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/scene.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/utils/surface_io.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -883,15 +894,15 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser.cpp.o: /mnt/c/Users/graph/OneDr
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
-CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser_lights.cpp \
+CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/scene_parser_lights.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_lights.cpp \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/lib/xml-parser/tinyxml2.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/color.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/scene_parser.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/camera.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/ambient_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/light.h \
@@ -900,12 +911,12 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o: /mnt/c/Users/grap
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/utils/lights.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/scene.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/utils/surface_io.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -1185,7 +1196,7 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser_lights.cpp.o: /mnt/c/Users/grap
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
-CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser_surface.cpp \
+CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/scene_parser_surface.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_surface.cpp \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/lib/xml-parser/tinyxml2.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/color.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat3.h \
@@ -1193,8 +1204,8 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o: /mnt/c/Users/gra
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/obj-parser/object_parser.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/scene_parser.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/camera.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/ambient_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/light.h \
@@ -1203,12 +1214,12 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o: /mnt/c/Users/gra
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/utils/lights.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/scene.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/utils/surface_io.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -1488,14 +1499,14 @@ CMakeFiles/raytracer.dir/src/parser/scene_parser_surface.cpp.o: /mnt/c/Users/gra
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
-CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.cpp \
+CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/xml_parser_utils.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.cpp \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/lib/xml-parser/tinyxml2.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/color.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/camera.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/ambient_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/light.h \
@@ -1504,12 +1515,12 @@ CMakeFiles/raytracer.dir/src/parser/xml_parser_utils.cpp.o: /mnt/c/Users/graph/O
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/utils/lights.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/scene.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/material.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/utils/surface_io.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -2006,12 +2017,12 @@ CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o: /mnt/c/Users/gr
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.cpp \
+CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.cpp \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec3.h \
   /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/vec4.h \
-  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h \
+  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -2025,6 +2036,7 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/codecvt.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -2037,10 +2049,14 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/istream.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
+  /usr/include/c++/13/bits/locale_conv.h \
   /usr/include/c++/13/bits/locale_facets.h \
   /usr/include/c++/13/bits/locale_facets.tcc \
+  /usr/include/c++/13/bits/locale_facets_nonio.h \
+  /usr/include/c++/13/bits/locale_facets_nonio.tcc \
   /usr/include/c++/13/bits/localefwd.h \
   /usr/include/c++/13/bits/memory_resource.h \
   /usr/include/c++/13/bits/memoryfwd.h \
@@ -2052,10 +2068,12 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/quoted_string.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/specfun.h \
+  /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
@@ -2078,6 +2096,7 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -2089,12 +2108,16 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/locale \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -2120,6 +2143,7 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/libintl.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
   /usr/include/math.h \
@@ -2210,7 +2234,9 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -2221,41 +2247,19 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.cpp:
-
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.cpp:
-
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser_surface.cpp:
-
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser_lights.cpp:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_lights.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/13/locale:
 
 /usr/include/c++/13/fstream:
 
 /usr/include/c++/13/filesystem:
-
-/usr/include/c++/13/ctime:
 
 /usr/include/c++/13/cstdint:
 
 /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/utils/lights_io.cpp:
 
 /usr/include/c++/13/codecvt:
-
-/usr/include/c++/13/bits/quoted_string.h:
-
-/usr/include/c++/13/bits/locale_facets_nonio.tcc:
-
-/usr/include/c++/13/bits/locale_facets_nonio.h:
 
 /usr/include/c++/13/bits/fstream.tcc:
 
@@ -2267,9 +2271,7 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/bits/fs_dir.h:
 
-/usr/include/c++/13/bits/codecvt.h:
-
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.cpp:
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/scene_parser.cpp:
 
 /usr/include/c++/13/functional:
 
@@ -2285,13 +2287,15 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
 
@@ -2304,6 +2308,18 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/c++/13/bits/align.h:
 
@@ -2320,6 +2336,10 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
 /usr/include/asm-generic/errno-base.h:
+
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.h:
+
+/usr/include/c++/13/climits:
 
 /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/scene.h:
 
@@ -2407,7 +2427,13 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
 /usr/include/c++/13/cstdio:
+
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/material.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
@@ -2418,6 +2444,10 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/c++/13/bits/stl_relops.h:
 
 /usr/include/c++/13/ratio:
 
@@ -2451,19 +2481,17 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/lights/spot_light.h:
 
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.cpp:
+
+/usr/include/c++/13/locale:
+
 /usr/include/c++/13/cstring:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/13/limits:
 
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml_parser_utils.h:
-
 /usr/include/c++/13/tr1/exp_integral.tcc:
-
-/usr/include/c++/13/iomanip:
-
-/usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
@@ -2503,6 +2531,12 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/tr1/poly_laguerre.tcc:
 
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/utils/surface_io.h:
+
 /usr/include/c++/13/bits/parse_numbers.h:
 
 /usr/include/c++/13/bits/std_abs.h:
@@ -2511,17 +2545,17 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/bits/uses_allocator.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+/usr/include/strings.h:
+
+/usr/include/c++/13/iomanip:
 
 /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h:
 
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/transform.h:
-
 /usr/include/c++/13/backward/binders.h:
 
-/usr/include/c++/13/climits:
-
 /usr/include/c++/13/cstddef:
+
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/scene_parser.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
@@ -2546,14 +2580,6 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/alloca.h:
-
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/material.h:
-
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
-
-/usr/include/c++/13/typeinfo:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
@@ -2613,8 +2639,6 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/scene_parser.h:
-
 /usr/include/c++/13/ext/aligned_buffer.h:
 
 /usr/include/locale.h:
@@ -2628,6 +2652,8 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 /usr/include/c++/13/bits/ios_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
+
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/transform.cpp:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
@@ -2663,7 +2689,15 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
+/usr/include/c++/13/bits/codecvt.h:
+
 /usr/include/c++/13/bits/cxxabi_forced.h:
+
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
+
+/usr/include/c++/13/typeinfo:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
@@ -2679,19 +2713,11 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/bits/exception_ptr.h:
 
-/usr/include/c++/13/bits/locale_conv.h:
-
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h:
-
-/usr/include/c++/13/bits/istream.tcc:
-
 /usr/include/c++/13/bits/functional_hash.h:
 
 /usr/include/errno.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/c++/13/bits/invoke.h:
 
@@ -2699,21 +2725,33 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/bits/locale_classes.h:
 
-/usr/include/c++/13/bits/stl_relops.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/math/mat4.h:
+
+/usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/c++/13/bits/locale_conv.h:
+
 /usr/include/c++/13/bits/locale_facets.h:
+
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/scene_parser_surface.cpp:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/c++/13/bits/locale_facets_nonio.h:
+
+/usr/include/c++/13/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/13/bits/stl_heap.h:
+
+/usr/include/c++/13/utility:
 
 /usr/include/c++/13/bits/localefwd.h:
 
@@ -2738,6 +2776,8 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 /usr/include/c++/13/bits/predefined_ops.h:
 
 /usr/include/c++/13/iosfwd:
+
+/usr/include/c++/13/bits/quoted_string.h:
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
 
@@ -2771,8 +2811,6 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
 /usr/include/c++/13/bits/stl_tempbuf.h:
 
 /usr/include/c++/13/bits/stl_vector.h:
@@ -2789,15 +2827,17 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/bits/string_view.tcc:
 
-/usr/include/c++/13/bits/stringfwd.h:
+/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/parser/xml-parser/utils/xml_parser_utils.h:
 
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/surface_io.h:
+/usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/c++/13/optional:
 
 /usr/include/c++/13/bits/vector.tcc:
 
 /usr/include/c++/13/cmath:
+
+/usr/include/c++/13/ctime:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -2827,10 +2867,6 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/istream:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/13/sstream:
@@ -2851,10 +2887,6 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 
 /usr/include/c++/13/tr1/poly_hermite.tcc:
 
-/usr/include/c++/13/bits/stl_heap.h:
-
-/usr/include/c++/13/utility:
-
 /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/main.cpp:
 
 /usr/include/c++/13/vector:
@@ -2866,9 +2898,3 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/transform.cpp.o: /mnt/c/Users/graph/
 /usr/include/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:

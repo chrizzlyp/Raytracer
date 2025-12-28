@@ -17,7 +17,9 @@ private:
   bool parseCamera(const tinyxml2::XMLElement *sceneEl, Camera &outCamera, std::string &outError) const;
   bool parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const;
   bool parseSurfaces(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const;
-  
+  bool parseMaterial(const tinyxml2::XMLElement *parentEl, Material &outMaterial, std::string &outError) const;
+  bool parseTransforms(const tinyxml2::XMLElement *parentEl, Transform &outTransform, std::string &outError) const;
+
   bool parseAmbientLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
   bool parsePointLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
   bool parseParallelLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
