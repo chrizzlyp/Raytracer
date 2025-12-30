@@ -15,6 +15,9 @@ add_executable(raytracer
     src/parser/obj-parser/object_parser.cpp
     src/scene/lights/utils/lights_io.cpp
     src/scene/surfaces/components/transform.cpp
+    src/render/ray_generator.cpp
+    src/render/renderer.cpp
+    src/render/image-writer/image_writer.cpp
     lib/xml-parser/tinyxml2.cpp
 )
 
@@ -22,6 +25,7 @@ add_executable(raytracer
 target_include_directories(raytracer PRIVATE 
     src
     lib/xml-parser
+    lib/image-writer
 
 )
 

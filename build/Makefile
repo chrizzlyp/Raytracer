@@ -297,6 +297,78 @@ src/parser/xml-parser/utils/xml_parser_utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/parser/xml-parser/utils/xml_parser_utils.cpp.s
 .PHONY : src/parser/xml-parser/utils/xml_parser_utils.cpp.s
 
+src/render/image-writer/image_writer.o: src/render/image-writer/image_writer.cpp.o
+.PHONY : src/render/image-writer/image_writer.o
+
+# target to build an object file
+src/render/image-writer/image_writer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o
+.PHONY : src/render/image-writer/image_writer.cpp.o
+
+src/render/image-writer/image_writer.i: src/render/image-writer/image_writer.cpp.i
+.PHONY : src/render/image-writer/image_writer.i
+
+# target to preprocess a source file
+src/render/image-writer/image_writer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.i
+.PHONY : src/render/image-writer/image_writer.cpp.i
+
+src/render/image-writer/image_writer.s: src/render/image-writer/image_writer.cpp.s
+.PHONY : src/render/image-writer/image_writer.s
+
+# target to generate assembly for a file
+src/render/image-writer/image_writer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.s
+.PHONY : src/render/image-writer/image_writer.cpp.s
+
+src/render/ray_generator.o: src/render/ray_generator.cpp.o
+.PHONY : src/render/ray_generator.o
+
+# target to build an object file
+src/render/ray_generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o
+.PHONY : src/render/ray_generator.cpp.o
+
+src/render/ray_generator.i: src/render/ray_generator.cpp.i
+.PHONY : src/render/ray_generator.i
+
+# target to preprocess a source file
+src/render/ray_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.i
+.PHONY : src/render/ray_generator.cpp.i
+
+src/render/ray_generator.s: src/render/ray_generator.cpp.s
+.PHONY : src/render/ray_generator.s
+
+# target to generate assembly for a file
+src/render/ray_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.s
+.PHONY : src/render/ray_generator.cpp.s
+
+src/render/renderer.o: src/render/renderer.cpp.o
+.PHONY : src/render/renderer.o
+
+# target to build an object file
+src/render/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/renderer.cpp.o
+.PHONY : src/render/renderer.cpp.o
+
+src/render/renderer.i: src/render/renderer.cpp.i
+.PHONY : src/render/renderer.i
+
+# target to preprocess a source file
+src/render/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/renderer.cpp.i
+.PHONY : src/render/renderer.cpp.i
+
+src/render/renderer.s: src/render/renderer.cpp.s
+.PHONY : src/render/renderer.s
+
+# target to generate assembly for a file
+src/render/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/renderer.cpp.s
+.PHONY : src/render/renderer.cpp.s
+
 src/scene/lights/utils/lights_io.o: src/scene/lights/utils/lights_io.cpp.o
 .PHONY : src/scene/lights/utils/lights_io.o
 
@@ -375,6 +447,15 @@ help:
 	@echo "... src/parser/xml-parser/utils/xml_parser_utils.o"
 	@echo "... src/parser/xml-parser/utils/xml_parser_utils.i"
 	@echo "... src/parser/xml-parser/utils/xml_parser_utils.s"
+	@echo "... src/render/image-writer/image_writer.o"
+	@echo "... src/render/image-writer/image_writer.i"
+	@echo "... src/render/image-writer/image_writer.s"
+	@echo "... src/render/ray_generator.o"
+	@echo "... src/render/ray_generator.i"
+	@echo "... src/render/ray_generator.s"
+	@echo "... src/render/renderer.o"
+	@echo "... src/render/renderer.i"
+	@echo "... src/render/renderer.s"
 	@echo "... src/scene/lights/utils/lights_io.o"
 	@echo "... src/scene/lights/utils/lights_io.i"
 	@echo "... src/scene/lights/utils/lights_io.s"
