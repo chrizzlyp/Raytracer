@@ -2,6 +2,7 @@
 #include "render/ray_generator.h"
 #include <algorithm>
 #include <stdexcept>
+#include "render/intersections/hit.h"
 
 bool Renderer::renderToPNG(const Scene &scene, RenderMode mode) const {
   Framebuffer framebuffer = this->render(scene, mode);
@@ -47,9 +48,39 @@ Framebuffer Renderer::renderDebugRayDirection(const Scene &scene) const {
   return framebuffer;
 }
 
-Framebuffer Renderer::renderNormal(const Scene &scene) const {
-  // Platzhalter: später Intersection + Normal
-  const Camera &camera = scene.camera();
-  Framebuffer framebuffer(camera.resHorizontal(), camera.resVertical());
+Framebuffer Renderer::renderNormal(const Scene& scene) const {
+  const Camera& camera = scene.camera();
+  const int widthPx  = camera.resHorizontal();
+  const int heightPx = camera.resVertical();
+
+  Framebuffer framebuffer(widthPx, heightPx);
+  RayGenerator rayGenerator(camera);
+
+  for (int y = 0; y < heightPx; ++y) {
+    for (int x = 0; x < widthPx; ++x) {
+      Ray ray = rayGenerator.makePrimaryRay(x, y);
+
+      Hit hit;           
+      bool anyHit = false;
+
+      for (const auto& surface : scene.surfaces()) {
+        if (surface->intersect(ray, hit)) {
+          anyHit = true;
+        }
+      }
+
+      if (!anyHit) {
+        framebuffer.setPixel(x, y, scene.backgroundColor());
+        continue;
+      }
+
+      // Normal [-1,1] -> Color [0,1]
+      Vec3 hitpointNormal = hit.normalWorldSpace.normalized();
+      Color color((hitpointNormal.x + 1.0f) * 0.5f, (hitpointNormal.y + 1.0f) * 0.5f,  (hitpointNormal.z + 1.0f) * 0.5f);
+
+      framebuffer.setPixel(x, y, color);
+    }
+  }
+
   return framebuffer;
 }

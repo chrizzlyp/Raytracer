@@ -3,6 +3,7 @@
 
 #include "math/vec3.h"
 #include "scene/surfaces/surface.h"
+#include "render/intersections/hit.h"
 #include <ostream>
 
 class Sphere : public Surface {
@@ -24,6 +25,8 @@ public:
   const float &radius() const {
     return radius_;
   }
+
+  bool intersect(const Ray& rayWorld, Hit& hit) const override;
 
 private:
   Vec3 centerPosition_{0, 0, 0};

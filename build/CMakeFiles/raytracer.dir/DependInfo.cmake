@@ -20,6 +20,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/renderer.cpp" "CMakeFiles/raytracer.dir/src/render/renderer.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/render/renderer.cpp.o.d"
   "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/lights/utils/lights_io.cpp" "CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o.d"
   "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/components/transform.cpp" "CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o.d"
+  "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/mesh.cpp" "CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o.d"
+  "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/sphere.cpp" "CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -3,6 +3,7 @@
 
 #include "scene/surfaces/components/material.h"
 #include "scene/surfaces/components/transform.h"
+#include "render/intersections/hit.h"
 
 enum class SurfaceType {
   SPHERE,
@@ -25,6 +26,8 @@ public:
   const Transform &transform() const {
     return transform_;
   }
+
+  virtual bool intersect(const Ray& rayWorld, Hit& hit) const = 0;
 
 protected:
   Material material_;

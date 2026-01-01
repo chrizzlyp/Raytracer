@@ -5,6 +5,7 @@
 #include "math/vec4.h"
 #include "math/mat3.h"
 #include "math/mat4.h"
+#include "math/ray.h"  
 
 class Transform {
 public:
@@ -24,10 +25,16 @@ public:
   Vec3 applyVector(const Vec3& direction) const;
   Vec3 applyNormal(const Vec3& normal) const;
 
+  Ray toObjectRay(const Ray& worldRay) const;
+
   friend std::ostream& operator<<(std::ostream& os, const Transform& t);
   
 private:
   void recomputeCachedMatrices(); // inverse + normal matrix
+
+  // helpers for (toObjectRay) transforming world space ray -> object space ray
+  Vec3 applyInversePoint(const Vec3& point) const;
+  Vec3 applyInverseVector(const Vec3& direction) const;
 
   Mat4 transformMatrix_;
   Mat4 inverseTransformMatrix_;

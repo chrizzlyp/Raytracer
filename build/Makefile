@@ -417,6 +417,54 @@ src/scene/surfaces/components/transform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.s
 .PHONY : src/scene/surfaces/components/transform.cpp.s
 
+src/scene/surfaces/mesh.o: src/scene/surfaces/mesh.cpp.o
+.PHONY : src/scene/surfaces/mesh.o
+
+# target to build an object file
+src/scene/surfaces/mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o
+.PHONY : src/scene/surfaces/mesh.cpp.o
+
+src/scene/surfaces/mesh.i: src/scene/surfaces/mesh.cpp.i
+.PHONY : src/scene/surfaces/mesh.i
+
+# target to preprocess a source file
+src/scene/surfaces/mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.i
+.PHONY : src/scene/surfaces/mesh.cpp.i
+
+src/scene/surfaces/mesh.s: src/scene/surfaces/mesh.cpp.s
+.PHONY : src/scene/surfaces/mesh.s
+
+# target to generate assembly for a file
+src/scene/surfaces/mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.s
+.PHONY : src/scene/surfaces/mesh.cpp.s
+
+src/scene/surfaces/sphere.o: src/scene/surfaces/sphere.cpp.o
+.PHONY : src/scene/surfaces/sphere.o
+
+# target to build an object file
+src/scene/surfaces/sphere.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o
+.PHONY : src/scene/surfaces/sphere.cpp.o
+
+src/scene/surfaces/sphere.i: src/scene/surfaces/sphere.cpp.i
+.PHONY : src/scene/surfaces/sphere.i
+
+# target to preprocess a source file
+src/scene/surfaces/sphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.i
+.PHONY : src/scene/surfaces/sphere.cpp.i
+
+src/scene/surfaces/sphere.s: src/scene/surfaces/sphere.cpp.s
+.PHONY : src/scene/surfaces/sphere.s
+
+# target to generate assembly for a file
+src/scene/surfaces/sphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.s
+.PHONY : src/scene/surfaces/sphere.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,6 +510,12 @@ help:
 	@echo "... src/scene/surfaces/components/transform.o"
 	@echo "... src/scene/surfaces/components/transform.i"
 	@echo "... src/scene/surfaces/components/transform.s"
+	@echo "... src/scene/surfaces/mesh.o"
+	@echo "... src/scene/surfaces/mesh.i"
+	@echo "... src/scene/surfaces/mesh.s"
+	@echo "... src/scene/surfaces/sphere.o"
+	@echo "... src/scene/surfaces/sphere.i"
+	@echo "... src/scene/surfaces/sphere.s"
 .PHONY : help
 
 

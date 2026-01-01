@@ -15,6 +15,8 @@ add_executable(raytracer
     src/parser/obj-parser/object_parser.cpp
     src/scene/lights/utils/lights_io.cpp
     src/scene/surfaces/components/transform.cpp
+    src/scene/surfaces/sphere.cpp
+    src/scene/surfaces/mesh.cpp
     src/render/ray_generator.cpp
     src/render/renderer.cpp
     src/render/image-writer/image_writer.cpp

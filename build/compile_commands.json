@@ -49,6 +49,18 @@
 },
 {
   "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
+  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/image-writer\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/sphere.cpp\"",
+  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/sphere.cpp",
+  "output": "CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
+  "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/image-writer\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/mesh.cpp\"",
+  "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/mesh.cpp",
+  "output": "CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build",
   "command": "/usr/bin/c++  -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser\" -I\"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/image-writer\" -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o -c \"/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/ray_generator.cpp\"",
   "file": "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/ray_generator.cpp",
   "output": "CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o"

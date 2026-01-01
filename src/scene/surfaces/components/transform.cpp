@@ -129,6 +129,24 @@ Vec3 Transform::applyNormal(const Vec3& normal) const {
   return transformedNormal;
 }
 
+//to transform a ray in world space to object space of the surface
+Ray Transform::toObjectRay(const Ray& worldRay) const {
+  Vec3 origin = applyInversePoint(worldRay.origin);
+  Vec3 direction = applyInverseVector(worldRay.direction).normalized();
+  return Ray{origin, direction};
+}
+
+Vec3 Transform::applyInversePoint(const Vec3& point) const {
+  const Vec4 homogenPoint = transform(inverseTransformMatrix_, Vec4{point.x, point.y, point.z, 1.f});
+  return {homogenPoint.x, homogenPoint.y, homogenPoint.z};
+}
+
+Vec3 Transform::applyInverseVector(const Vec3& direction) const {
+  const Vec4 homVector = transform(inverseTransformMatrix_, Vec4{direction.x, direction.y, direction.z, 0.f});
+  return {homVector.x, homVector.y, homVector.z};
+}
+
+
 std::ostream& operator<<(std::ostream& os, const Transform& t) {
   os << "Transform {\n";
   os << "  transformMatrix:\n"        << t.transformMatrix()        << "\n";

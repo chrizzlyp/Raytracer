@@ -5,6 +5,7 @@
 #include "scene/surfaces/surface.h"
 #include <ostream>
 #include <vector>
+#include "render/intersections/hit.h"
 
 struct TrianglePrimitive {
   Vec3 v0, v1, v2;
@@ -33,6 +34,8 @@ public:
   const std::vector<TrianglePrimitive> &triangles() const {
     return trianglePrimitives_;
   }
+
+   bool intersect(const Ray& rayWorld, Hit& hit) const override;
 
 private:
   std::vector<TrianglePrimitive> trianglePrimitives_;

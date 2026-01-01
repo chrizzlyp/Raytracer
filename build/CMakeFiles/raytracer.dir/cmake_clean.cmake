@@ -23,6 +23,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o.d"
   "CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o"
   "CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o.d"
+  "CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o"
+  "CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o.d"
+  "CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o"
+  "CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o.d"
   "raytracer"
   "raytracer.pdb"
 )
