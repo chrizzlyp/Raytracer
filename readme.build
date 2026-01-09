@@ -1,4 +1,6 @@
 Build:
+    navigate to parent Raytracer folder
+    mkdir build
     cd build
     change in CMakeLists: cmake ..
     change in code: cmake --build . -j
@@ -15,5 +17,5 @@ ChatGPT Usage:
     Intersection:           https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
     Illumination:           https://chatgpt.com/share/69599595-be28-8012-8d55-ab6aaaad0b84
     
-Completed:
+claim:
     all tasks from T1 until T8 completed!
