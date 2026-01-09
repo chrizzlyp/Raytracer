@@ -49,16 +49,16 @@ bool Sphere::intersect(const Ray &rayWorldSpace, Hit &hit) const {
   Vec3 hitpointNormalObjectSpace = (hitpointObjectSpace - centerPosition_).normalized();
 
   // transform the hitpoint + normal back to world space
-  Vec3 hitpoinhitpointRayOriginDistanceWorldSpaceSpace = transform_.applyPoint(hitpointObjectSpace);
+  Vec3 hitpointWorldSpace = transform_.applyPoint(hitpointObjectSpace);
   Vec3 hitpointNormalWorldSpace = transform_.applyNormal(hitpointNormalObjectSpace).normalized();
 
   // distance of hitpoint to ray starting point in worldspace
-  float hitpointRayOriginDistanceWorldSpace = (hitpoinhitpointRayOriginDistanceWorldSpaceSpace - rayWorldSpace.origin).length(); 
+  float hitpointRayOriginDistanceWorldSpace = (hitpointWorldSpace - rayWorldSpace.origin).length(); 
 
   // only saves the closest intersection
   if (hitpointRayOriginDistanceWorldSpace < hit.distanceClosestIntersection) {
     hit.distanceClosestIntersection = hitpointRayOriginDistanceWorldSpace;
-    hit.positionWorldSpace = hitpoinhitpointRayOriginDistanceWorldSpaceSpace;
+    hit.positionWorldSpace = hitpointWorldSpace;
     hit.normalWorldSpace = hitpointNormalWorldSpace;
     hit.material = &material_;
     return true;

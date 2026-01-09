@@ -129,6 +129,30 @@ raytracer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/build
 .PHONY : raytracer/fast
 
+assets/textures/texture_manager.o: assets/textures/texture_manager.cpp.o
+.PHONY : assets/textures/texture_manager.o
+
+# target to build an object file
+assets/textures/texture_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o
+.PHONY : assets/textures/texture_manager.cpp.o
+
+assets/textures/texture_manager.i: assets/textures/texture_manager.cpp.i
+.PHONY : assets/textures/texture_manager.i
+
+# target to preprocess a source file
+assets/textures/texture_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.i
+.PHONY : assets/textures/texture_manager.cpp.i
+
+assets/textures/texture_manager.s: assets/textures/texture_manager.cpp.s
+.PHONY : assets/textures/texture_manager.s
+
+# target to generate assembly for a file
+assets/textures/texture_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.s
+.PHONY : assets/textures/texture_manager.cpp.s
+
 lib/xml-parser/tinyxml2.o: lib/xml-parser/tinyxml2.cpp.o
 .PHONY : lib/xml-parser/tinyxml2.o
 
@@ -369,6 +393,54 @@ src/render/renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/renderer.cpp.s
 .PHONY : src/render/renderer.cpp.s
 
+src/render/shader.o: src/render/shader.cpp.o
+.PHONY : src/render/shader.o
+
+# target to build an object file
+src/render/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/shader.cpp.o
+.PHONY : src/render/shader.cpp.o
+
+src/render/shader.i: src/render/shader.cpp.i
+.PHONY : src/render/shader.i
+
+# target to preprocess a source file
+src/render/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/shader.cpp.i
+.PHONY : src/render/shader.cpp.i
+
+src/render/shader.s: src/render/shader.cpp.s
+.PHONY : src/render/shader.s
+
+# target to generate assembly for a file
+src/render/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/shader.cpp.s
+.PHONY : src/render/shader.cpp.s
+
+src/render/shadow_tester.o: src/render/shadow_tester.cpp.o
+.PHONY : src/render/shadow_tester.o
+
+# target to build an object file
+src/render/shadow_tester.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o
+.PHONY : src/render/shadow_tester.cpp.o
+
+src/render/shadow_tester.i: src/render/shadow_tester.cpp.i
+.PHONY : src/render/shadow_tester.i
+
+# target to preprocess a source file
+src/render/shadow_tester.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.i
+.PHONY : src/render/shadow_tester.cpp.i
+
+src/render/shadow_tester.s: src/render/shadow_tester.cpp.s
+.PHONY : src/render/shadow_tester.s
+
+# target to generate assembly for a file
+src/render/shadow_tester.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.s
+.PHONY : src/render/shadow_tester.cpp.s
+
 src/scene/lights/utils/lights_io.o: src/scene/lights/utils/lights_io.cpp.o
 .PHONY : src/scene/lights/utils/lights_io.o
 
@@ -392,6 +464,30 @@ src/scene/lights/utils/lights_io.s: src/scene/lights/utils/lights_io.cpp.s
 src/scene/lights/utils/lights_io.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.s
 .PHONY : src/scene/lights/utils/lights_io.cpp.s
+
+src/scene/surfaces/components/texture.o: src/scene/surfaces/components/texture.cpp.o
+.PHONY : src/scene/surfaces/components/texture.o
+
+# target to build an object file
+src/scene/surfaces/components/texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o
+.PHONY : src/scene/surfaces/components/texture.cpp.o
+
+src/scene/surfaces/components/texture.i: src/scene/surfaces/components/texture.cpp.i
+.PHONY : src/scene/surfaces/components/texture.i
+
+# target to preprocess a source file
+src/scene/surfaces/components/texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.i
+.PHONY : src/scene/surfaces/components/texture.cpp.i
+
+src/scene/surfaces/components/texture.s: src/scene/surfaces/components/texture.cpp.s
+.PHONY : src/scene/surfaces/components/texture.s
+
+# target to generate assembly for a file
+src/scene/surfaces/components/texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.s
+.PHONY : src/scene/surfaces/components/texture.cpp.s
 
 src/scene/surfaces/components/transform.o: src/scene/surfaces/components/transform.cpp.o
 .PHONY : src/scene/surfaces/components/transform.o
@@ -474,6 +570,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... raytracer"
+	@echo "... assets/textures/texture_manager.o"
+	@echo "... assets/textures/texture_manager.i"
+	@echo "... assets/textures/texture_manager.s"
 	@echo "... lib/xml-parser/tinyxml2.o"
 	@echo "... lib/xml-parser/tinyxml2.i"
 	@echo "... lib/xml-parser/tinyxml2.s"
@@ -504,9 +603,18 @@ help:
 	@echo "... src/render/renderer.o"
 	@echo "... src/render/renderer.i"
 	@echo "... src/render/renderer.s"
+	@echo "... src/render/shader.o"
+	@echo "... src/render/shader.i"
+	@echo "... src/render/shader.s"
+	@echo "... src/render/shadow_tester.o"
+	@echo "... src/render/shadow_tester.i"
+	@echo "... src/render/shadow_tester.s"
 	@echo "... src/scene/lights/utils/lights_io.o"
 	@echo "... src/scene/lights/utils/lights_io.i"
 	@echo "... src/scene/lights/utils/lights_io.s"
+	@echo "... src/scene/surfaces/components/texture.o"
+	@echo "... src/scene/surfaces/components/texture.i"
+	@echo "... src/scene/surfaces/components/texture.s"
 	@echo "... src/scene/surfaces/components/transform.o"
 	@echo "... src/scene/surfaces/components/transform.i"
 	@echo "... src/scene/surfaces/components/transform.s"

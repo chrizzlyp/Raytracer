@@ -4,9 +4,14 @@ Build: (cd build)
 Run:
     ./raytracer "path"
 
-
 ChatGPT Usage:
     XML Parser:             https://chatgpt.com/share/6949913c-7f70-8012-8e94-2b99ac73db5b
     Scene Structure:        https://chatgpt.com/share/69499153-f408-8012-9284-0376380fb6ce
     Obj-Parser (Lab 1a):    https://chatgpt.com/share/694ebc39-3e38-8012-a39d-d408595771f5
     Transformation:         https://chatgpt.com/share/694ebc57-51ec-8012-bcab-7d85410b8d5d
+    Ray-Generator:          https://chatgpt.com/share/6952abcb-48b0-8012-8419-5172b36e557b
+    Renderer:               https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
+    Intersection:           https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
+    Illumination:           https://chatgpt.com/share/69599595-be28-8012-8d55-ab6aaaad0b84
+    
+    

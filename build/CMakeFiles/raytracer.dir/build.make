@@ -209,10 +209,24 @@ CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/mesh.cpp" -o CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.s
 
+CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/texture.cpp
+CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o -MF CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o.d -o CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/components/texture.cpp"
+
+CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/components/texture.cpp" > CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.i
+
+CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/scene/surfaces/components/texture.cpp" -o CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.s
+
 CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/ray_generator.cpp
 CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o -MF CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o.d -o CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/ray_generator.cpp"
 
 CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.s: cmake_force
 CMakeFiles/raytracer.dir/src/render/renderer.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/src/render/renderer.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/renderer.cpp
 CMakeFiles/raytracer.dir/src/render/renderer.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/raytracer.dir/src/render/renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/raytracer.dir/src/render/renderer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/src/render/renderer.cpp.o -MF CMakeFiles/raytracer.dir/src/render/renderer.cpp.o.d -o CMakeFiles/raytracer.dir/src/render/renderer.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/renderer.cpp"
 
 CMakeFiles/raytracer.dir/src/render/renderer.cpp.i: cmake_force
@@ -237,10 +251,38 @@ CMakeFiles/raytracer.dir/src/render/renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/src/render/renderer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/renderer.cpp" -o CMakeFiles/raytracer.dir/src/render/renderer.cpp.s
 
+CMakeFiles/raytracer.dir/src/render/shader.cpp.o: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/src/render/shader.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/shader.cpp
+CMakeFiles/raytracer.dir/src/render/shader.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/raytracer.dir/src/render/shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/src/render/shader.cpp.o -MF CMakeFiles/raytracer.dir/src/render/shader.cpp.o.d -o CMakeFiles/raytracer.dir/src/render/shader.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/shader.cpp"
+
+CMakeFiles/raytracer.dir/src/render/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/src/render/shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/shader.cpp" > CMakeFiles/raytracer.dir/src/render/shader.cpp.i
+
+CMakeFiles/raytracer.dir/src/render/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/src/render/shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/shader.cpp" -o CMakeFiles/raytracer.dir/src/render/shader.cpp.s
+
+CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/shadow_tester.cpp
+CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o -MF CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o.d -o CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/shadow_tester.cpp"
+
+CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/shadow_tester.cpp" > CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.i
+
+CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/shadow_tester.cpp" -o CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.s
+
 CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/image-writer/image_writer.cpp
 CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o -MF CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o.d -o CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/image-writer/image_writer.cpp"
 
 CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.i: cmake_force
@@ -251,10 +293,24 @@ CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/src/render/image-writer/image_writer.cpp" -o CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.s
 
+CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/assets/textures/texture_manager.cpp
+CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o -MF CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o.d -o CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/assets/textures/texture_manager.cpp"
+
+CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/assets/textures/texture_manager.cpp" > CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.i
+
+CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/assets/textures/texture_manager.cpp" -o CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.s
+
 CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o: /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/lib/xml-parser/tinyxml2.cpp
 CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o: CMakeFiles/raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o -MF CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o.d -o CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o -c "/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/lib/xml-parser/tinyxml2.cpp"
 
 CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.i: cmake_force
@@ -277,9 +333,13 @@ raytracer_OBJECTS = \
 "CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o" \
 "CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o" \
 "CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o" \
+"CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o" \
 "CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o" \
 "CMakeFiles/raytracer.dir/src/render/renderer.cpp.o" \
+"CMakeFiles/raytracer.dir/src/render/shader.cpp.o" \
+"CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o" \
 "CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o" \
+"CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o" \
 "CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o"
 
 # External object files for target raytracer
@@ -295,13 +355,17 @@ raytracer: CMakeFiles/raytracer.dir/src/scene/lights/utils/lights_io.cpp.o
 raytracer: CMakeFiles/raytracer.dir/src/scene/surfaces/components/transform.cpp.o
 raytracer: CMakeFiles/raytracer.dir/src/scene/surfaces/sphere.cpp.o
 raytracer: CMakeFiles/raytracer.dir/src/scene/surfaces/mesh.cpp.o
+raytracer: CMakeFiles/raytracer.dir/src/scene/surfaces/components/texture.cpp.o
 raytracer: CMakeFiles/raytracer.dir/src/render/ray_generator.cpp.o
 raytracer: CMakeFiles/raytracer.dir/src/render/renderer.cpp.o
+raytracer: CMakeFiles/raytracer.dir/src/render/shader.cpp.o
+raytracer: CMakeFiles/raytracer.dir/src/render/shadow_tester.cpp.o
 raytracer: CMakeFiles/raytracer.dir/src/render/image-writer/image_writer.cpp.o
+raytracer: CMakeFiles/raytracer.dir/assets/textures/texture_manager.cpp.o
 raytracer: CMakeFiles/raytracer.dir/lib/xml-parser/tinyxml2.cpp.o
 raytracer: CMakeFiles/raytracer.dir/build.make
 raytracer: CMakeFiles/raytracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable raytracer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable raytracer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raytracer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

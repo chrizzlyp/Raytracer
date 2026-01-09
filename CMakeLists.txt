@@ -17,9 +17,13 @@ add_executable(raytracer
     src/scene/surfaces/components/transform.cpp
     src/scene/surfaces/sphere.cpp
     src/scene/surfaces/mesh.cpp
+    src/scene/surfaces/components/texture.cpp
     src/render/ray_generator.cpp
     src/render/renderer.cpp
+    src/render/shader.cpp
+    src/render/shadow_tester.cpp
     src/render/image-writer/image_writer.cpp
+    assets/textures/texture_manager.cpp
     lib/xml-parser/tinyxml2.cpp
 )
 
@@ -28,6 +32,7 @@ target_include_directories(raytracer PRIVATE
     src
     lib/xml-parser
     lib/image-writer
+    assets
 
 )
 

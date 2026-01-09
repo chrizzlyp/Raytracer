@@ -9,7 +9,8 @@
 
 enum class RenderMode {
   DebugRayDirection,
-  Normal
+  Normal,
+  Realistic
 };
 
 class Renderer {
@@ -21,6 +22,12 @@ private:
   Framebuffer render(const Scene &scene, RenderMode mode) const;
   Framebuffer renderDebugRayDirection(const Scene &scene) const;
   Framebuffer renderNormal(const Scene &scene) const;
+  Framebuffer renderRealistic(const Scene &scene) const;
+  Color trace(const Scene &scene, const Ray &ray, int depth, float currentIor) const;
+
+  void computeRefractionIors(const Material &mat, const Vec3 &I, const Vec3 &N, float currentIor, float &etaI, float &etaT) const;
+  Ray makeRayFromSurface(const Vec3& P, const Vec3& N, const Vec3& dir) const;
+  bool findClosestHit(const Scene& scene, const Ray& ray, Hit& outHit) const;
 
 private:
   ImageWriter writer;

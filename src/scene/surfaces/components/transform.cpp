@@ -142,10 +142,9 @@ Vec3 Transform::applyInversePoint(const Vec3& point) const {
 }
 
 Vec3 Transform::applyInverseVector(const Vec3& direction) const {
-  const Vec4 homVector = transform(inverseTransformMatrix_, Vec4{direction.x, direction.y, direction.z, 0.f});
-  return {homVector.x, homVector.y, homVector.z};
+  const Vec4 homogenVector = transform(inverseTransformMatrix_, Vec4{direction.x, direction.y, direction.z, 0.f});
+  return {homogenVector.x, homogenVector.y, homogenVector.z};
 }
-
 
 std::ostream& operator<<(std::ostream& os, const Transform& t) {
   os << "Transform {\n";

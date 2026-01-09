@@ -14,6 +14,7 @@
 #include "scene/lights/utils/lights.h"
 #include "scene/surfaces/surface.h"
 #include "scene/surfaces/utils/surface_io.h"
+#include "textures/texture_manager.h"
 
 class Scene {
 public:
@@ -42,6 +43,10 @@ public:
     return surfaces_;
   }
 
+  TextureManager &textureManager() {
+    return textureManager_;
+  }
+
   // setter
   void setOutputFileName(std::string path) {
     outputFileName_ = std::move(path);
@@ -67,6 +72,10 @@ public:
     surfaces_.push_back(std::move(s));
   }
 
+  const TextureManager &textureManager() const {
+    return textureManager_;
+  }
+
 private:
   std::string outputFileName_;
   Color backgroundColor_{0.f, 0.f, 0.f};
@@ -74,6 +83,7 @@ private:
   std::optional<AmbientLight> ambient_;
   std::vector<std::unique_ptr<Light>> lights_;
   std::vector<std::unique_ptr<Surface>> surfaces_;
+  mutable TextureManager textureManager_;
 };
 
 inline std::ostream &operator<<(std::ostream &os, const Scene &s) {
@@ -98,7 +108,7 @@ inline std::ostream &operator<<(std::ostream &os, const Scene &s) {
   for (size_t i = 0; i < s.surfaces().size(); ++i) {
     if (i)
       os << ", ";
-    os << *s.surfaces()[i]; 
+    os << *s.surfaces()[i];
   }
   os << "]}";
 

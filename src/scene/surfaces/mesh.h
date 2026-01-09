@@ -6,6 +6,7 @@
 #include <ostream>
 #include <vector>
 #include "render/intersections/hit.h"
+#include "math/ray.h"
 
 struct TrianglePrimitive {
   Vec3 v0, v1, v2;

@@ -238,4 +238,19 @@ CMakeFiles/raytracer.dir/src/render/renderer.cpp.o: \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/utils/surface_io.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/mesh.h \
  /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/sphere.h \
- /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/ray_generator.h
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/assets/textures/texture_manager.h \
+ /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
+ /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/scene/surfaces/components/texture.h \
+ /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/material_response.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/ray_generator.h \
+ /mnt/c/Users/graph/OneDrive/Dokumente/Uni\ Wien\ WS25/Computer\ Graphics/Raytracer/src/render/shader.h

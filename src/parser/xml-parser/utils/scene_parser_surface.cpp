@@ -272,17 +272,17 @@ bool SceneParser::parseMaterial(const tinyxml2::XMLElement *parentEl, Material &
   return true;
 }
 
-// Parse the <transforms> block of a surface object
+// Parse the <transform> block of a surface object
 bool SceneParser::parseTransforms(const tinyxml2::XMLElement *parentEl, Transform &outTransform, std::string &outError) const {
   if (!parentEl) {
     outError = "parseTransforms: parent element is null.";
     return false;
   }
 
-  // locate <transforms> section in <surface>
-  const tinyxml2::XMLElement *transformsEl = parentEl->FirstChildElement("transforms");
+  // locate <transform> section in <surface>
+  const tinyxml2::XMLElement *transformsEl = parentEl->FirstChildElement("transform");
 
-  // <transforms> not exisiting
+  // <transform> not exisiting
   if (!transformsEl) {
     outTransform = Transform{};
     return true;

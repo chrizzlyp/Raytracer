@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
   Renderer renderer;
 
   try {
-    const bool ok = renderer.renderToPNG(scene, RenderMode::Normal);
+    const bool ok = renderer.renderToPNG(scene, RenderMode::Realistic);
     if (!ok) {
       std::cerr << "Failed to write PNG.\n";
       return 3;
