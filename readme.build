@@ -1,8 +1,9 @@
-Build: (cd build)
-    Change in CMakeLists: cmake ..
-    Change in code: cmake --build . -j
+Build:
+    cd build
+    change in CMakeLists: cmake ..
+    change in code: cmake --build . -j
 Run:
-    ./raytracer "path"
+    ./raytracer "local path to xml file" (obj and texture files are provided in my raytracer)
 
 ChatGPT Usage:
     XML Parser:             https://chatgpt.com/share/6949913c-7f70-8012-8e94-2b99ac73db5b
@@ -14,4 +15,5 @@ ChatGPT Usage:
     Intersection:           https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
     Illumination:           https://chatgpt.com/share/69599595-be28-8012-8d55-ab6aaaad0b84
     
-    
+Completed:
+    all tasks from T1 until T8 completed!

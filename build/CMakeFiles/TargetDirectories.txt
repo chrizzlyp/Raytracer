@@ -1,3 +1,0 @@
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles/raytracer.dir
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/graph/OneDrive/Dokumente/Uni Wien WS25/Computer Graphics/Raytracer/build/CMakeFiles/rebuild_cache.dir
