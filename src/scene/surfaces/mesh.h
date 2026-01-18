@@ -1,12 +1,12 @@
 #ifndef MESH_H
 #define MESH_H
 
+#include "math/ray.h"
 #include "math/vec3.h"
+#include "render/intersections/hit.h"
 #include "scene/surfaces/surface.h"
 #include <ostream>
 #include <vector>
-#include "render/intersections/hit.h"
-#include "math/ray.h"
 
 struct TrianglePrimitive {
   Vec3 v0, v1, v2;
@@ -36,7 +36,8 @@ public:
     return trianglePrimitives_;
   }
 
-   bool intersect(const Ray& rayWorld, Hit& hit) const override;
+  bool intersect(const Ray &rayWorld, Hit &hit) const override;
+  AABB getWorldBoundingVolume() const override;
 
 private:
   std::vector<TrianglePrimitive> trianglePrimitives_;
@@ -60,7 +61,8 @@ inline std::ostream &operator<<(std::ostream &os, const Mesh &m) {
     os << "]";
   }
 
-  os << ", material=" << m.material() << ", transform=\n" << m.transform() << "}";
+  os << ", material=" << m.material() << ", transform=\n"
+     << m.transform() << "}";
   return os;
 }
 

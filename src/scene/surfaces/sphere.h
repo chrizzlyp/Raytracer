@@ -27,6 +27,7 @@ public:
   }
 
   bool intersect(const Ray& rayWorld, Hit& hit) const override;
+  AABB getWorldBoundingVolume() const override;
 
 private:
   Vec3 centerPosition_{0, 0, 0};

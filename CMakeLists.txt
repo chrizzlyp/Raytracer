@@ -23,6 +23,7 @@ add_executable(raytracer
     src/render/shader.cpp
     src/render/shadow_tester.cpp
     src/render/image-writer/image_writer.cpp
+    src/render/intersections/bvh/scene_bvh.cpp
     assets/textures/texture_manager.cpp
     lib/xml-parser/tinyxml2.cpp
 )

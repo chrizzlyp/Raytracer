@@ -91,3 +91,13 @@ bool Mesh::intersect(const Ray &rayWorldSpace, Hit &hit) const {
 
   return anyHit;
 }
+
+AABB Mesh::getWorldBoundingVolume() const {
+  AABB boundingVolume;
+  for (const auto& eachTriangle : triangles()) {
+    boundingVolume.includePoint(transform().applyPoint(eachTriangle.v0));
+    boundingVolume.includePoint(transform().applyPoint(eachTriangle.v1));
+    boundingVolume.includePoint(transform().applyPoint(eachTriangle.v2));
+  }
+  return boundingVolume;
+}

@@ -15,6 +15,7 @@
 #include "scene/surfaces/surface.h"
 #include "scene/surfaces/utils/surface_io.h"
 #include "textures/texture_manager.h"
+#include "render/intersections/bvh/scene_bvh.h"
 
 class Scene {
 public:
@@ -47,6 +48,14 @@ public:
     return textureManager_;
   }
 
+  const SceneBVH &bvh() const {
+    return bvh_;
+  }
+
+  bool useBVH() const {
+    return useBvh_;
+  }
+
   // setter
   void setOutputFileName(std::string path) {
     outputFileName_ = std::move(path);
@@ -76,6 +85,10 @@ public:
     return textureManager_;
   }
 
+  void buildBVH() const{
+    bvh_.build(*this);
+  }
+
 private:
   std::string outputFileName_;
   Color backgroundColor_{0.f, 0.f, 0.f};
@@ -84,6 +97,8 @@ private:
   std::vector<std::unique_ptr<Light>> lights_;
   std::vector<std::unique_ptr<Surface>> surfaces_;
   mutable TextureManager textureManager_;
+  mutable SceneBVH bvh_;
+  mutable bool useBvh_ = false;
 };
 
 inline std::ostream &operator<<(std::ostream &os, const Scene &s) {

@@ -4,6 +4,7 @@
 #include "scene/surfaces/components/material.h"
 #include "scene/surfaces/components/transform.h"
 #include "render/intersections/hit.h"
+#include "render/intersections/bvh/aabb.h"
 
 enum class SurfaceType {
   SPHERE,
@@ -28,6 +29,7 @@ public:
   }
 
   virtual bool intersect(const Ray& rayWorld, Hit& hit) const = 0;
+  virtual AABB getWorldBoundingVolume() const = 0;
 
 protected:
   Material material_;

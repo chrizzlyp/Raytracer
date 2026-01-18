@@ -66,3 +66,15 @@ bool Sphere::intersect(const Ray &rayWorldSpace, Hit &hit) const {
 
   return false;
 }
+
+AABB Sphere::getWorldBoundingVolume() const {
+  Vec3 sphereCenterWorldSpace = transform().applyPoint(centerPosition());
+
+  float scaleX = transform().applyVector(Vec3(1,0,0)).length();
+  float scaleY = transform().applyVector(Vec3(0,1,0)).length();
+  float scaleZ = transform().applyVector(Vec3(0,0,1)).length();
+
+  Vec3 halfExtents(radius() * scaleX, radius() * scaleY, radius() * scaleZ);
+
+  return AABB(sphereCenterWorldSpace - halfExtents, sphereCenterWorldSpace + halfExtents);
+}

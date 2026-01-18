@@ -47,25 +47,28 @@ bool ShadowTester::castShadowRay(const Light &light, const Vec3 &P, const Vec3 &
 }
 
 bool ShadowTester::isInShadow(const Scene &scene, const Vec3 &P, const Vec3 &N, const Light &light) {
-  // set in castShadowRay()
   Ray shadowRay;
   float maxDistanceToLight = 0.f;
 
   if (!castShadowRay(light, P, N, shadowRay, maxDistanceToLight))
     return false; // unimplemented lights or light at the same position as the hitpoint -> no shadow
 
-  // intersections test
+  if (scene.useBVH()) {
+    return scene.bvh().occluded(shadowRay, maxDistanceToLight);
+  }
+
   Hit shadowHit;
+  shadowHit.distanceClosestIntersection = 1e30f;
 
   for (const auto &eachSurface : scene.surfaces()) {
-    if (eachSurface->intersect(shadowRay, shadowHit)) {
-      // point light: hit only counts if the blocker is before the light source
-      if (shadowHit.distanceClosestIntersection > EPS && shadowHit.distanceClosestIntersection < maxDistanceToLight - EPS) {
+    Hit temp = shadowHit;
+    if (eachSurface->intersect(shadowRay, temp)) {
+      if (temp.distanceClosestIntersection > EPS &&
+          temp.distanceClosestIntersection < maxDistanceToLight - EPS) {
         return true;
       }
-
-      // parallel light (in infinity): every hit counts 
-      if (maxDistanceToLight == std::numeric_limits<float>::infinity() && shadowHit.distanceClosestIntersection > EPS) {
+      if (maxDistanceToLight == std::numeric_limits<float>::infinity() &&
+          temp.distanceClosestIntersection > EPS) {
         return true;
       }
     }

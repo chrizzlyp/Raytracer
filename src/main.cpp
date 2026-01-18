@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <chrono>
 
 #include "parser/xml-parser/scene_parser.h"
 #include "render/renderer.h"
@@ -25,7 +26,14 @@ int main(int argc, char **argv) {
   Renderer renderer;
 
   try {
+    auto start = std::chrono::high_resolution_clock::now();
+
     const bool ok = renderer.renderToPNG(scene, RenderMode::Realistic);
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> seconds = end - start;
+    std::cout << "Render time: " << seconds.count() << " s\n";
+
     if (!ok) {
       std::cerr << "Failed to write PNG.\n";
       return 3;

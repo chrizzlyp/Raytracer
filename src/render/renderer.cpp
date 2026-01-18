@@ -15,6 +15,8 @@ bool Renderer::renderToPNG(const Scene &scene, RenderMode mode) const {
 }
 
 Framebuffer Renderer::render(const Scene &scene, RenderMode mode) const {
+  if(scene.useBVH()) scene.buildBVH();
+
   switch (mode) {
   case RenderMode::DebugRayDirection:
     return renderDebugRayDirection(scene);
@@ -161,7 +163,7 @@ Color Renderer::trace(const Scene &scene, const Ray &ray, int depth, float curre
     computeRefractionIors(material, I, N, currentIor, etaI, etaT);
 
     Vec3 refractedDirection;
-    if (MaterialResponse::refract(I, N, etaI, etaT, refractedDirection)){
+    if (MaterialResponse::refract(I, N, etaI, etaT, refractedDirection)) {
       Ray refractedRay = makeRayFromSurface(P, N, refractedDirection);
 
       refracted = trace(scene, refractedRay, depth - 1, etaT);
@@ -182,11 +184,15 @@ Color Renderer::trace(const Scene &scene, const Ray &ray, int depth, float curre
 }
 
 bool Renderer::findClosestHit(const Scene &scene, const Ray &ray, Hit &outHit) const {
+  if (scene.useBVH()) {
+    return scene.bvh().intersect(ray, outHit);
+  }
 
   bool anyHit = false;
   for (const auto &surface : scene.surfaces()) {
-    if (surface->intersect(ray, outHit))
+    if (surface->intersect(ray, outHit)) {
       anyHit = true;
+    }
   }
   return anyHit;
 }

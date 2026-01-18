@@ -6,6 +6,7 @@
 #include "math/color.h"
 #include "render/framebuffer.h"
 #include "scene/scene.h"
+#include "render/intersections/bvh/scene_bvh.h"
 
 enum class RenderMode {
   DebugRayDirection,
@@ -31,6 +32,8 @@ private:
 
 private:
   ImageWriter writer;
+  mutable SceneBVH bvh;
+  bool useBVH = false;
 };
 
 #endif

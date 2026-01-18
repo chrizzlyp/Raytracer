@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <ostream>
+#include <cassert> 
 
 struct Vec3 {
   float x = 0.f;
@@ -35,6 +36,16 @@ struct Vec3 {
       y /= len;
       z /= len;
     }
+  }
+
+   float operator[](int i) const {
+    assert(i >= 0 && i < 3);
+    return (i == 0) ? x : (i == 1) ? y : z;
+  }
+
+  float& operator[](int i) {
+    assert(i >= 0 && i < 3);
+    return (i == 0) ? x : (i == 1) ? y : z;
   }
 };
 

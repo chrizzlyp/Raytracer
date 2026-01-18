@@ -13,6 +13,7 @@ public:
 
 private:
   static bool castShadowRay(const Light &light, const Vec3 &P, const Vec3 &N, Ray &shadowRay, float &maxDistanceToLight);
+  bool useBVH = false;
 };
 
 #endif
