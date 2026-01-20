@@ -9,6 +9,7 @@ class Texture {
 public:
   bool loadPNG(const std::string &filename);
   Color sampleColor(float u, float v) const;
+  float sampleHeight(float u, float v) const;
   int getWidth() const {
     return width;
   }
@@ -23,6 +24,10 @@ private:
   int width = 0;
   int height = 0;
   std::vector<unsigned char> rgba;
+  static float wrapTo01(float x);
+  static int wrapi(int i, int n);
+  Color fetchTexel(int x, int y) const;
+  Color sampleBilinear(float u, float v) const;
 };
 
 #endif

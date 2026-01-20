@@ -159,6 +159,9 @@ bool SceneParser::parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outSce
     } else if (std::strcmp(name, "spot_light") == 0) {
       if (!parseSpotLight(el, outScene, outError))
         return false;
+    } else if (std::strcmp(name, "area_light") == 0) {
+      if (!parseAreaLight(el, outScene, outError))
+        return false;
     } else {
       outError = std::string("Unknown light type <") + name + "> inside <lights>.";
       return false;
@@ -172,11 +175,11 @@ bool SceneParser::parseLights(const tinyxml2::XMLElement *sceneEl, Scene &outSce
 bool SceneParser::parseSurfaces(const tinyxml2::XMLElement *sceneEl, Scene &outScene, std::string &outError) const {
   // Locate <surface> under <scene>
   const tinyxml2::XMLElement *surfacesEl = sceneEl->FirstChildElement("surfaces");
-  // no elements in <surface> 
+  // no elements in <surface>
   if (!surfacesEl)
-    return true; 
+    return true;
 
-  // Iterate over all surface elements  
+  // Iterate over all surface elements
   for (const tinyxml2::XMLElement *el = surfacesEl->FirstChildElement();
        el != nullptr; el = el->NextSiblingElement()) {
 
@@ -199,4 +202,3 @@ bool SceneParser::parseSurfaces(const tinyxml2::XMLElement *sceneEl, Scene &outS
 
   return true;
 }
-

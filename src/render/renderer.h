@@ -33,7 +33,7 @@ private:
 private:
   ImageWriter writer;
   mutable SceneBVH bvh;
-  bool useBVH = false;
+  bool useBVH = true;
 };
 
 #endif

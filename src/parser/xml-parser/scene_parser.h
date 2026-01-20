@@ -27,6 +27,8 @@ private:
 
   bool parseSphere(const tinyxml2::XMLElement *sphereEl, Scene &outScene, std::string &outError) const;
   bool parseMesh(const tinyxml2::XMLElement *meshEl, Scene &outScene, std::string &outError) const;
+  bool parseAreaLight(const tinyxml2::XMLElement *el, Scene &outScene, std::string &outError) const;
+
 };
 
 #endif

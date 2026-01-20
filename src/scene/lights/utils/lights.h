@@ -7,5 +7,6 @@
 #include "scene/lights/point_light.h"
 #include "scene/lights/parallel_light.h"
 #include "scene/lights/spot_light.h"
+#include "scene/lights/area_light.h"
 
 #endif 

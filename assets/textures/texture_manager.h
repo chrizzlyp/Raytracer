@@ -10,6 +10,7 @@ class TextureManager {
 public:
   const Texture& getTexture(const std::string& textureName) const;
   void setBaseDir(std::string baseDir);
+  float sampleHeight(float u, float v) const;
 
 private:
   std::string baseDir = (std::filesystem::current_path().parent_path() / "assets/textures/").string();

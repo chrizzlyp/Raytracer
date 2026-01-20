@@ -3,7 +3,7 @@
 
 #include "math/color.h"
 
-enum class LightType { AMBIENT, POINT, PARALLEL, SPOT };
+enum class LightType { AMBIENT, POINT, PARALLEL, SPOT, AREA };
 
 class Light {
 public:

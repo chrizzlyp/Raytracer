@@ -1,7 +1,10 @@
 #include "render/shadow_tester.h"
 
+#include "scene/lights/area_light.h"
 #include "scene/lights/parallel_light.h"
 #include "scene/lights/point_light.h"
+#include "scene/lights/spot_light.h"
+#include <cstdlib>
 #include <limits>
 
 static constexpr float EPS = 1e-4f;
@@ -41,6 +44,20 @@ bool ShadowTester::castShadowRay(const Light &light, const Vec3 &P, const Vec3 &
     return true;
   }
 
+  case LightType::SPOT: {
+    auto &spot = static_cast<const SpotLight &>(light);
+
+    Vec3 L = spot.position() - shadowRayOrigin;
+    float hitDistance = L.length();
+    if (hitDistance <= EPS)
+      return false;
+
+    shadowRay.origin = shadowRayOrigin;
+    shadowRay.direction = L / hitDistance;
+    maxDistanceToLight = hitDistance;
+    return true;
+  }
+
   default:
     return false;
   }
@@ -51,10 +68,14 @@ bool ShadowTester::isInShadow(const Scene &scene, const Vec3 &P, const Vec3 &N, 
   float maxDistanceToLight = 0.f;
 
   if (!castShadowRay(light, P, N, shadowRay, maxDistanceToLight))
-    return false; // unimplemented lights or light at the same position as the hitpoint -> no shadow
+    return false;
 
+  return occluded(scene, shadowRay, maxDistanceToLight);
+}
+
+bool ShadowTester::occluded(const Scene &scene, const Ray &ray, float maxDist) {
   if (scene.useBVH()) {
-    return scene.bvh().occluded(shadowRay, maxDistanceToLight);
+    return scene.bvh().occluded(ray, maxDist);
   }
 
   Hit shadowHit;
@@ -62,17 +83,53 @@ bool ShadowTester::isInShadow(const Scene &scene, const Vec3 &P, const Vec3 &N, 
 
   for (const auto &eachSurface : scene.surfaces()) {
     Hit temp = shadowHit;
-    if (eachSurface->intersect(shadowRay, temp)) {
-      if (temp.distanceClosestIntersection > EPS &&
-          temp.distanceClosestIntersection < maxDistanceToLight - EPS) {
-        return true;
-      }
-      if (maxDistanceToLight == std::numeric_limits<float>::infinity() &&
-          temp.distanceClosestIntersection > EPS) {
-        return true;
+    if (eachSurface->intersect(ray, temp)) {
+      if (maxDist == std::numeric_limits<float>::infinity()) {
+        if (temp.distanceClosestIntersection > EPS)
+          return true;
+      } else {
+        if (temp.distanceClosestIntersection > EPS &&
+            temp.distanceClosestIntersection < maxDist - EPS) {
+          return true;
+        }
       }
     }
   }
-
   return false;
+}
+
+bool ShadowTester::castShadowRayToSpecificPoint(const Vec3 &lightPoint, const Vec3 &P, const Vec3 &N, Ray &shadowRay, float &maxDistanceToLight) {
+  Vec3 origin = P + N * EPS;
+  Vec3 L = lightPoint - origin;
+  float dist = L.length();
+  if (dist <= EPS)
+    return false;
+
+  shadowRay.origin = origin;
+  shadowRay.direction = L / dist;
+  maxDistanceToLight = dist;
+
+  return true;
+}
+
+static float rand01() {
+  return (float)std::rand() / (float)(RAND_MAX + 1.0f);
+}
+
+float ShadowTester::visibilityToAreaLight(const Scene &scene, const Vec3 &P, const Vec3 &N, const AreaLight &light, int samples) {
+  int unoccluded = 0;
+
+  for (int i = 0; i < samples; i++) {
+    Vec3 lightPoint = light.samplePoint(rand01(), rand01());
+
+    Ray shadowRay;
+    float maxDist = 0.f;
+    if (!castShadowRayToSpecificPoint(lightPoint, P, N, shadowRay, maxDist))
+      continue;
+
+    if (!occluded(scene, shadowRay, maxDist))
+      unoccluded++;
+  }
+
+  return (samples > 0) ? (float)unoccluded / (float)samples : 1.0f;
 }

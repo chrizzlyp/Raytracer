@@ -269,6 +269,32 @@ bool SceneParser::parseMaterial(const tinyxml2::XMLElement *parentEl, Material &
     }
   }
 
+  // <bump_map name="filename.png"/>
+  {
+    const tinyxml2::XMLElement* bumpEl = materialEl->FirstChildElement("bump_map");
+    if (bumpEl) {
+      const char* bumpName = bumpEl->Attribute("name");
+      if (!bumpName || std::string(bumpName).empty()) {
+        outError = "<bump_map> must have a non-empty name attribute.";
+        return false;
+      }
+      outMaterial.setBumpMapName(bumpName);
+    }
+  }
+
+  // <bump_strength s="float"/>
+  {
+    const tinyxml2::XMLElement* bumpStrengthEl = materialEl->FirstChildElement("bump_strength");
+    if (bumpStrengthEl) {
+      float strength = outMaterial.bumpStrength();
+      if (bumpStrengthEl->QueryFloatAttribute("s", &strength) != tinyxml2::XML_SUCCESS) {
+        outError = "<bump_strength> must have float attribute s.";
+        return false;
+      }
+      outMaterial.setBumpStrength(strength);
+    }
+  }
+
   return true;
 }
 

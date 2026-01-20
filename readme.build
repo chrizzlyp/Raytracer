@@ -7,6 +7,9 @@ Build:
 Run:
     ./raytracer "local path to xml file" (obj and texture files are provided in my raytracer)
 
+Note:
+    Toggle BVH in class scene.h in with private flag bool useBvh_
+
 ChatGPT Usage:
     XML Parser:             https://chatgpt.com/share/6949913c-7f70-8012-8e94-2b99ac73db5b
     Scene Structure:        https://chatgpt.com/share/69499153-f408-8012-9284-0376380fb6ce
@@ -16,6 +19,8 @@ ChatGPT Usage:
     Renderer:               https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
     Intersection:           https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
     Illumination:           https://chatgpt.com/share/69599595-be28-8012-8d55-ab6aaaad0b84
+    BVH & Bump Mapping:     https://chatgpt.com/share/696e7517-c020-8012-91ab-fd6c46b1643c
+    Spot Light:             https://chatgpt.com/share/696fe6b4-d254-8012-b2ef-973d056b7e8f
     
 claim:
     all tasks from T1 until T8 completed!
