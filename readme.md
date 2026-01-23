@@ -1,6 +1,6 @@
 # Wicked Raytracer (C++)
 
-This project is a **CPU-based ray tracer** written in **modern C++**, developed as part of a *Computer Graphics* course.  
+This project is a **CPU-based ray tracer** written in C++, developed as part of a *Computer Graphics* course.  
 It is implemented **without any external rendering frameworks** and focuses on classic ray tracing techniques.
 
 The only external libraries used are:
@@ -20,7 +20,6 @@ The project is built using **CMake** and compiled with **g++ (version 7.5)**.
 
 ### Build Steps
 ```bash
-mkdir build
 cd build
 
 cmake ..
@@ -51,7 +50,7 @@ Textures and bump maps must be located in:
 
 ![Example 8](build/example8.png)
 
-### Example 7 – Complex Geometry and Reflections
+### Example 7 – Complex Geometry
 - Output image: `build/example7.png`
 
 ![Example 7](build/example7.png)
@@ -81,30 +80,3 @@ Measured performance:
 - Example 7: ~8× speedup with BVH enabled  
 - Example 8: small speedup, since area light sampling and soft shadows dominate the rendering cost
 
----
-
-## Scene Description – Example 8
-
-The rendered image shows a studio-like scene setup:
-- A large textured concrete sphere placed at the center
-- A floor plane and a background wall
-- Two smaller spheres in the foreground:
-  - a glass sphere with **refraction** and partial **reflection**
-  - a mirror sphere with full **reflection**
-
-Lighting configuration:
-- An **area light** above the scene producing **soft shadows**
-- A **spot light** directed at the main objects
-- Additional fill and rim lights for visual balance
-
----
-
-## Notes
-- No external rendering frameworks were used
-- All ray tracing effects were implemented manually
-- Designed for correctness and clarity rather than GPU acceleration
-
----
-
-## Author
-Computer Graphics – University Project
