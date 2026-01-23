@@ -1,21 +1,110 @@
-Build:
-    navigate to parent Raytracer folder
-    mkdir build
-    cd build
-    change in CMakeLists: cmake ..
-    change in code: cmake --build . -j
-Run:
-    ./raytracer "local path to xml file" (obj and texture files are provided in my raytracer)
+# Wicked Raytracer (C++)
 
-Note:
-    Toggle BVH in class scene.h in with flag useBvh.
-    Texutes for texture/bump mapping needs to be stored in assets/textures.
+This project is a **CPU-based ray tracer** written in **modern C++**, developed as part of a *Computer Graphics* course.  
+It is implemented **without any external rendering frameworks** and focuses on classic ray tracing techniques.
 
-Description of the example8:
-    The rendered image shows a studio-like setup with a large textured concrete sphere in the center, placed on a floor plane in front of a wall. 
-    In the foreground, two smaller spheres are positioned closer to the camera, one glass sphere with refraction and partial reflection,
-    one mirror sphere with full reflection.
+The only external libraries used are:
+- a lightweight **PNG reader/writer**
+- a simple **XML parser** for scene descriptions
 
-    Effects implemented: 
-        Anti-aliasing, Bump Mapping, Area Light with soft shadows, Spot Light
+The project is built using **CMake** and compiled with **g++ (version 7.5)**.
 
+---
+
+## Build Instructions
+
+### Requirements
+- **g++ 7.5**
+- **CMake ≥ 3.10**
+- Linux / WSL / Unix-like environment
+
+### Build Steps
+```bash
+mkdir build
+cd build
+
+cmake ..
+
+cmake --build . -j
+```
+
+---
+
+## Run
+
+Run the ray tracer with a scene XML file:
+```bash
+./raytracer <path-to-scene.xml>
+```
+
+All required OBJ meshes and texture files are included in the repository.
+
+Textures and bump maps must be located in:
+`assets/textures/`
+
+---
+
+## Rendered Results
+
+### Example 8 – Advanced Lighting and Materials
+- Output image: `build/example8.png`
+
+![Example 8](build/example8.png)
+
+### Example 7 – Complex Geometry and Reflections
+- Output image: `build/example7.png`
+
+![Example 7](build/example7.png)
+
+---
+
+## Implemented Features
+- Phong illumination model
+- Anti-aliasing
+- Texture mapping
+- Bump mapping
+- Reflection
+- Refraction
+- Area lights with soft shadows
+- Spot lights
+- Bounding Volume Hierarchy (BVH) acceleration
+
+---
+
+## BVH Acceleration
+
+The ray tracer supports an optional **Bounding Volume Hierarchy (BVH)** to accelerate ray–scene intersection tests.
+
+BVH can be enabled or disabled using the `useBvh` flag in `scene.h`.
+
+Measured performance:
+- Example 7: ~8× speedup with BVH enabled  
+- Example 8: small speedup, since area light sampling and soft shadows dominate the rendering cost
+
+---
+
+## Scene Description – Example 8
+
+The rendered image shows a studio-like scene setup:
+- A large textured concrete sphere placed at the center
+- A floor plane and a background wall
+- Two smaller spheres in the foreground:
+  - a glass sphere with **refraction** and partial **reflection**
+  - a mirror sphere with full **reflection**
+
+Lighting configuration:
+- An **area light** above the scene producing **soft shadows**
+- A **spot light** directed at the main objects
+- Additional fill and rim lights for visual balance
+
+---
+
+## Notes
+- No external rendering frameworks were used
+- All ray tracing effects were implemented manually
+- Designed for correctness and clarity rather than GPU acceleration
+
+---
+
+## Author
+Computer Graphics – University Project
