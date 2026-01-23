@@ -1,0 +1,126 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE scene SYSTEM "scene.dtd">
+
+<scene output_file="example8.png">
+  <background_color r="0.0" g="0.0" b="0.0"/>
+
+  <camera>
+    <position x="0.0" y="0.2" z="3.0"/>
+    <lookat x="0.0" y="1.3" z="-7.0"/>
+    <up x="0.0" y="1.0" z="0.0"/>
+    <horizontal_fov angle="45"/>
+    <resolution horizontal="2048" vertical="2048"/>
+    <max_bounces n="8"/>
+  </camera>
+
+  <lights>
+    <ambient_light>
+      <color r="0.18" g="0.18" b="0.18"/>
+    </ambient_light>
+
+    <area_light>
+      <color r="1.0" g="1.0" b="1.0"/>
+      <center x="0.0" y="7.2" z="-6.5"/>
+      <half_width_vec x="3.0" y="0.0" z="0.0"/>
+      <half_height_vec x="0.0" y="0.0" z="3.0"/>
+    </area_light>
+
+    <spot_light>
+      <color r="0.9" g="0.9" b="1.0"/>
+      <position x="4.0" y="7.0" z="1.5"/>
+      <direction x="-0.343" y="-0.685" z="-0.643"/>
+      <falloff alpha1="25.0" alpha2="40.0"/>
+    </spot_light>
+
+    <point_light>
+      <color r="0.25" g="0.25" b="0.25"/>
+      <position x="-6.0" y="3.5" z="2.0"/>
+    </point_light>
+
+    <point_light>
+      <color r="0.4" g="0.4" b="0.4"/>
+      <position x="0.0" y="8.0" z="-18.0"/>
+    </point_light>
+  </lights>
+
+  <surfaces>
+
+    <mesh name="plane_small.obj">
+      <material_solid>
+        <color r="0.22" g="0.22" b="0.22"/>
+        <phong ka="0.2" kd="0.9" ks="0.15" exponent="40"/>
+        <reflectance r="0"/>
+        <transmittance t="0"/>
+        <refraction iof="0"/>
+      </material_solid>
+      <transform>
+        <translate x="0.0" y="-2.5" z="-10.0"/>
+        <rotateX theta="-90.0"/>
+        <scale x="25" y="25" z="1.0"/>
+      </transform>
+    </mesh>
+
+    <mesh name="plane_small.obj">
+      <material_solid>
+        <color r="0.18" g="0.18" b="0.18"/>
+        <phong ka="0.2" kd="0.9" ks="0.1" exponent="30"/>
+        <reflectance r="0"/>
+        <transmittance t="0"/>
+        <refraction iof="0"/>
+      </material_solid>
+      <transform>
+        <translate x="0.0" y="0.0" z="-15.0"/>
+        <scale x="160.0" y="160.0" z="1.0"/>
+      </transform>
+    </mesh>
+
+    <sphere radius="1.0">
+      <position x="0" y="0" z="0"/>
+      <material_textured>
+        <texture name="concrete.png"/>
+        <phong ka="0.2" kd="0.95" ks="0.12" exponent="35"/>
+        <reflectance r="0.0"/>
+        <transmittance t="0.0"/>
+        <refraction iof="0"/>
+
+        <bump_map name="concrete_bump.png"/>
+        <bump_strength s="0.55"/>
+      </material_textured>
+      <transform>
+        <translate x="0.0" y="1.5" z="-7.0"/>
+        <scale x="4.0" y="4.0" z="4.0"/>
+      </transform>
+    </sphere>
+
+    <sphere radius="0.5">
+      <position x="0" y="0" z="0"/>
+      <material_solid>
+        <color r="0.95" g="0.98" b="1.0"/>
+        <phong ka="0.05" kd="0.05" ks="0.35" exponent="120"/>
+        <reflectance r="0.05"/>
+        <transmittance t="1.0"/>
+        <refraction iof="1.5"/>
+      </material_solid>
+      <transform>
+        <translate x="-2.8" y="-1.1" z="-4.0"/>
+        <scale x="2.8" y="2.8" z="2.8"/>
+      </transform>
+    </sphere>
+
+    <sphere radius="0.5">
+      <position x="0" y="0" z="0"/>
+      <material_solid>
+        <color r="1.0" g="1.0" b="1.0"/>
+        <phong ka="0.05" kd="0.02" ks="0.9" exponent="250"/>
+        <reflectance r="1.0"/>
+        <transmittance t="0.0"/>
+        <refraction iof="0.0"/>
+      </material_solid>
+      <transform>
+        <translate x="2.8" y="-1.1" z="-3.4"/>
+        <scale x="2.8" y="2.8" z="2.8"/>
+      </transform>
+    </sphere>
+
+  </surfaces>
+</scene>

@@ -98,7 +98,7 @@ private:
   std::vector<std::unique_ptr<Surface>> surfaces_;
   mutable TextureManager textureManager_;
   mutable SceneBVH bvh_;
-  mutable bool useBvh_ = false;
+  mutable bool useBvh_ = true;
 };
 
 inline std::ostream &operator<<(std::ostream &os, const Scene &s) {

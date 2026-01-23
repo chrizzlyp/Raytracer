@@ -8,20 +8,14 @@ Run:
     ./raytracer "local path to xml file" (obj and texture files are provided in my raytracer)
 
 Note:
-    Toggle BVH in class scene.h in with private flag bool useBvh_
+    Toggle BVH in class scene.h in with flag useBvh.
+    Texutes for texture/bump mapping needs to be stored in assets/textures.
 
-ChatGPT Usage:
-    XML Parser:             https://chatgpt.com/share/6949913c-7f70-8012-8e94-2b99ac73db5b
-    Scene Structure:        https://chatgpt.com/share/69499153-f408-8012-9284-0376380fb6ce
-    Obj-Parser (Lab 1a):    https://chatgpt.com/share/694ebc39-3e38-8012-a39d-d408595771f5
-    Transformation:         https://chatgpt.com/share/694ebc57-51ec-8012-bcab-7d85410b8d5d
-    Ray-Generator:          https://chatgpt.com/share/6952abcb-48b0-8012-8419-5172b36e557b
-    Renderer:               https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
-    Intersection:           https://chatgpt.com/share/69544315-5af8-8012-b3a6-d9aa99a6a72c
-    Illumination:           https://chatgpt.com/share/69599595-be28-8012-8d55-ab6aaaad0b84
-    BVH & Bump Mapping:     https://chatgpt.com/share/696e7517-c020-8012-91ab-fd6c46b1643c
-    Spot Light:             https://chatgpt.com/share/696fe6b4-d254-8012-b2ef-973d056b7e8f
-    
-claim:
-    all tasks from T1 until T8 completed!
-    also tested on almighty and worked
+Description of the example8:
+    The rendered image shows a studio-like setup with a large textured concrete sphere in the center, placed on a floor plane in front of a wall. 
+    In the foreground, two smaller spheres are positioned closer to the camera, one glass sphere with refraction and partial reflection,
+    one mirror sphere with full reflection.
+
+    Effects implemented: 
+        Anti-aliasing, Bump Mapping, Area Light with soft shadows, Spot Light
+
