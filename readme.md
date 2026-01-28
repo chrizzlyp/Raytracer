@@ -1,4 +1,4 @@
-# Wicked Raytracer (C++)
+# Whitted Raytracer (C++)
 
 This project is a **CPU-based ray tracer** written in C++, developed as part of a *Computer Graphics* course.  
 It is implemented **without any external rendering frameworks** and focuses on classic ray tracing techniques.
